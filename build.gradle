@@ -52,16 +52,6 @@ repositories {
     jcenter()
     mavenCentral()
     mavenLocal()
-    /*
-    maven {
-        url "http://build.thirdchannel.com:8081/artifactory/libs-internal"
-        //Add authentication details to repository connection
-        credentials {
-            username = "admin"
-            password = "APHcYZY78ctaAoN64sjLztmc4WxNqQms11vMR"
-        }
-    }
-    */
 }
 
 dependencies {
@@ -101,7 +91,7 @@ test {
 
 
 //jooq {
-//    thirdchannel(sourceSets.main) {
+//    pokemon(sourceSets.main) {
 //        jdbc {
 //            driver = 'org.postgresql.Driver'
 //            url = 'jdbc:postgresql://localhost:5432/pokemon'
@@ -126,7 +116,7 @@ test {
 //
 //            }
 //            target {
-//                packageName = 'com.thirdchannel.db'
+//                packageName = 'com.pokemon.db'
 //                 directory = 'src/main/java'
 //            }
 //        }
