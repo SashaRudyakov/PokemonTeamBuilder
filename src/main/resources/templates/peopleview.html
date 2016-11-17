@@ -4,24 +4,36 @@
     <meta charset="UTF-8"></meta>
     <title>Sasha's Awesome Webpage</title>
 </head>
-<h3> People </h3>
+<h3> Pokemon </h3>
 <body>
 <table border="1" style="width:300px">
     <thead>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Age</th>
+        <th>DexNum</th>
+        <th>Name</th>
+        <th>Evolves To</th>
+        <th>Type1</th>
+        <th>Type2</th>
+        <th>Move1</th>
+        <th>Move2</th>
+        <th>Move3</th>
+        <th>Move4</th>
         <th>Action</th>
     </thead>
     <tbody>
     <th:block th:each="person : ${people}">
         <tr>
-            <td th:text="${person.firstName}">A Smoke Test'</td>
-            <td th:text="${person.lastName}">A Smoke Test'</td>
-            <td th:text="${person.age}"></td>
+            <td th:text="${person.pokedexNum}">A Smoke Test'</td>
+            <td th:text="${person.name}">A Smoke Test'</td>
+            <td th:text="${person.evolvesTo}">A Smoke Test'</td>
+            <td th:text="${person.type1}">A Smoke Test'</td>
+            <td th:text="${person.type2}">A Smoke Test'</td>
+            <td th:text="${person.move1}">A Smoke Test'</td>
+            <td th:text="${person.move2}">A Smoke Test'</td>
+            <td th:text="${person.move3}">A Smoke Test'</td>
+            <td th:text="${person.move4}">A Smoke Test'</td>
             <td>
-                <a href="#" data-th-href="@{/edit(id=${person.id})}">edit</a>
-                <a href="#" data-th-href="@{/delete(id=${person.id})}">delete</a>
+                <a href="#" data-th-href="@{/edit(id=${person.pokedexNum})}">edit</a>
+                <a href="#" data-th-href="@{/delete(id=${person.pokedexNum})}">delete</a>
             </td>
         </tr>
     </th:block>
@@ -30,5 +42,9 @@
 <form action="#" th:action="@{/create}" method="get">
     <input type="submit" value="create" />
 </form>
+<form action="#" th:action="@{/types}" method="get">
+    <input type="submit" value="view types" />
+</form>
+<img src="../../images/giratina.gif" />
 </body>
 </html>

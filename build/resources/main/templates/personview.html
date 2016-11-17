@@ -4,7 +4,7 @@
     <meta charset="UTF-8"></meta>
     <title>Sasha's Awesome Webpage</title>
 </head>
-<h3 th:text="${person.firstName}"></h3>
+<h3 th:text="${person.name}"></h3>
 <!--<body th:object="${person}">-->
 <!--Age <input type="text" th:field="*{age}" />-->
 <!--First Name <input type="text" th:field="*{firstName}" />-->
@@ -14,21 +14,38 @@
 <!--</form>-->
 <!--</body>-->
 <form action="#" th:action="@{/save-person}" th:object="${person}" method="post">
-    <input hidden="hidden" type="text" th:field="*{id}" th:value="*{id}" />
+    <input hidden="hidden" type="text" th:field="*{pokedexNum}" th:value="*{pokedexNum}" />
     <div>
-        Age
-        <input type="text" th:field="*{age}" th:value="*{age}" />
-        <font color="red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</font>
+        Name
+        <input type="text" th:field="*{name}" th:value="*{name}" />
     </div>
     <div>
-        First Name
-        <input type="text" th:field="*{firstName}" th:value="*{firstName}" />
-        <font color="red" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Age Error</font>
+        Evolves To
+        <input type="text" th:field="*{evolvesTo}" th:value="*{evolvesTo}" />
     </div>
     <div>
-        Last Name
-        <input type="text" th:field="*{lastName}" th:value="*{lastName}"/>
-        <font color="red" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Age Error</font>
+        Type1
+        <input type="text" th:field="*{type1}" th:value="*{type1}"/>
+    </div>
+    <div>
+        Type2
+        <input type="text" th:field="*{type2}" th:value="*{type2}"/>
+    </div>
+    <div>
+        Move1
+        <input type="text" th:field="*{move1}" th:value="*{move1}"/>
+    </div>
+    <div>
+        Move2
+        <input type="text" th:field="*{move2}" th:value="*{move2}"/>
+    </div>
+    <div>
+        Move3
+        <input type="text" th:field="*{move3}" th:value="*{move3}"/>
+    </div>
+    <div>
+        Move4
+        <input type="text" th:field="*{move4}" th:value="*{move4}"/>
     </div>
     <input type="submit" />
 </form>

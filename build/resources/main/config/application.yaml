@@ -28,7 +28,7 @@ spring:
     maxAge:                        0
     suspectTimeout:                0
     useEquals:                     true
-    url:      jdbc:postgresql://localhost/testDatabase
+    url:      jdbc:postgresql://localhost/pokemon
     username: sasharudyakov
     password: admin
 
@@ -36,7 +36,7 @@ spring:
 logging:
   level:
     org.jooq: INFO
-    com.thirdchannel: INFO
+    com.pokemon: INFO
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     #org.springframework.security: DEBUG
@@ -48,6 +48,6 @@ spring:
   profiles: dev
 
   datasource:
-    url:      jdbc:postgresql://localhost/testDatabase
+    url:      jdbc:postgresql://localhost/pokemon
     username: sasharudyakov
     password: admin

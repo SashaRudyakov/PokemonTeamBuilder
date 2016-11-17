@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Sasha's Awesome Webpage</title>
+</head>
+<h3> Types </h3>
+<body>
+<table border="1" style="width:300px">
+    <thead>
+    <th>Name</th>
+    </thead>
+    <tbody>
+    <th:block th:each="type : ${types}">
+        <tr>
+            <td th:text="${type.name}">A Smoke Test'</td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<form action="#" th:action="@{/createType}" method="get">
+    <input type="submit" value="createType" />
+</form>
+</body>
+</html>
