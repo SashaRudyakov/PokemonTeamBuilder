@@ -67,7 +67,7 @@ ALTER TABLE move OWNER TO admin;
 CREATE TABLE pokemon (
     name character varying(45) NOT NULL,
     pokedex_num integer NOT NULL,
-    evolves_to integer NOT NULL,
+    evolves_to integer,
     type1 character varying(45) NOT NULL,
     type2 character varying(45),
     move1 character varying(45) NOT NULL,
