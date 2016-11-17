@@ -73,7 +73,8 @@ CREATE TABLE pokemon (
     move1 character varying(45) NOT NULL,
     move2 character varying(45),
     move3 character varying(45),
-    move4 character varying(45)
+    move4 character varying(45),
+    sprite character varying(128)
 );
 
 
@@ -155,6 +156,75 @@ ALTER TABLE type OWNER TO admin;
 --
 
 ALTER TABLE ONLY trainer ALTER COLUMN tid SET DEFAULT nextval('trainer_tid_seq'::regclass);
+
+
+--
+-- Data for Name: move; Type: TABLE DATA; Schema: public; Owner: admin
+--
+
+COPY move (name, strength, effect, description, type) FROM stdin;
+razor leaf	55	\N	shoots some leaves	grass
+\.
+
+
+--
+-- Data for Name: pokemon; Type: TABLE DATA; Schema: public; Owner: admin
+--
+
+COPY pokemon (name, pokedex_num, evolves_to, type1, type2, move1, move2, move3, move4, sprite) FROM stdin;
+Venusaur	3	\N	grass	poison	razor leaf	\N	\N	\N	\N
+Ivysaur	2	3	grass	\N	razor leaf	\N	\N	\N	\N
+Bulbasaur	1	2	grass	poison	razor leaf	\N	\N	\N	../../images/giratina.gif
+\.
+
+
+--
+-- Data for Name: strong_against; Type: TABLE DATA; Schema: public; Owner: admin
+--
+
+COPY strong_against (weak_type, strong_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: trainer; Type: TABLE DATA; Schema: public; Owner: admin
+--
+
+COPY trainer (name, tid, gender, age, username) FROM stdin;
+\.
+
+
+--
+-- Name: trainer_tid_seq; Type: SEQUENCE SET; Schema: public; Owner: admin
+--
+
+SELECT pg_catalog.setval('trainer_tid_seq', 1, false);
+
+
+--
+-- Data for Name: trains; Type: TABLE DATA; Schema: public; Owner: admin
+--
+
+COPY trains (pokedex_num, tid) FROM stdin;
+\.
+
+
+--
+-- Data for Name: type; Type: TABLE DATA; Schema: public; Owner: admin
+--
+
+COPY type (name) FROM stdin;
+grass
+poison
+fire
+water
+ice
+steel
+dragon
+fairy
+ghost
+psychic
+\.
 
 
 --
