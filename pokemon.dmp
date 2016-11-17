@@ -1,0 +1,317 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.4
+-- Dumped by pg_dump version 9.5.4
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+--
+-- Name: gender; Type: TYPE; Schema: public; Owner: admin
+--
+
+CREATE TYPE gender AS ENUM (
+    'female',
+    'male'
+);
+
+
+ALTER TYPE gender OWNER TO admin;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: move; Type: TABLE; Schema: public; Owner: admin
+--
+
+CREATE TABLE move (
+    name character varying(45) NOT NULL,
+    strength integer NOT NULL,
+    effect character varying(45),
+    description character varying(100) NOT NULL,
+    type character varying(45) NOT NULL
+);
+
+
+ALTER TABLE move OWNER TO admin;
+
+--
+-- Name: pokemon; Type: TABLE; Schema: public; Owner: admin
+--
+
+CREATE TABLE pokemon (
+    name character varying(45) NOT NULL,
+    pokedex_num integer NOT NULL,
+    evolves_to integer NOT NULL,
+    type1 character varying(45) NOT NULL,
+    type2 character varying(45),
+    move1 character varying(45) NOT NULL,
+    move2 character varying(45),
+    move3 character varying(45),
+    move4 character varying(45)
+);
+
+
+ALTER TABLE pokemon OWNER TO admin;
+
+--
+-- Name: strong_against; Type: TABLE; Schema: public; Owner: admin
+--
+
+CREATE TABLE strong_against (
+    weak_type character varying(45) NOT NULL,
+    strong_type character varying(45) NOT NULL
+);
+
+
+ALTER TABLE strong_against OWNER TO admin;
+
+--
+-- Name: trainer; Type: TABLE; Schema: public; Owner: admin
+--
+
+CREATE TABLE trainer (
+    name character varying(45) NOT NULL,
+    tid integer NOT NULL,
+    gender gender,
+    age integer NOT NULL,
+    username character varying(45) NOT NULL
+);
+
+
+ALTER TABLE trainer OWNER TO admin;
+
+--
+-- Name: trainer_tid_seq; Type: SEQUENCE; Schema: public; Owner: admin
+--
+
+CREATE SEQUENCE trainer_tid_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE trainer_tid_seq OWNER TO admin;
+
+--
+-- Name: trainer_tid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: admin
+--
+
+ALTER SEQUENCE trainer_tid_seq OWNED BY trainer.tid;
+
+
+--
+-- Name: trains; Type: TABLE; Schema: public; Owner: admin
+--
+
+CREATE TABLE trains (
+    pokedex_num integer NOT NULL,
+    tid integer NOT NULL
+);
+
+
+ALTER TABLE trains OWNER TO admin;
+
+--
+-- Name: type; Type: TABLE; Schema: public; Owner: admin
+--
+
+CREATE TABLE type (
+    name character varying(45) NOT NULL
+);
+
+
+ALTER TABLE type OWNER TO admin;
+
+--
+-- Name: tid; Type: DEFAULT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY trainer ALTER COLUMN tid SET DEFAULT nextval('trainer_tid_seq'::regclass);
+
+
+--
+-- Name: move_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY move
+    ADD CONSTRAINT move_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: pokemon_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_pkey PRIMARY KEY (pokedex_num);
+
+
+--
+-- Name: strong_against_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY strong_against
+    ADD CONSTRAINT strong_against_pkey PRIMARY KEY (weak_type, strong_type);
+
+
+--
+-- Name: trainer_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY trainer
+    ADD CONSTRAINT trainer_pkey PRIMARY KEY (tid);
+
+
+--
+-- Name: trains_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY trains
+    ADD CONSTRAINT trains_pkey PRIMARY KEY (pokedex_num, tid);
+
+
+--
+-- Name: type_pkey; Type: CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY type
+    ADD CONSTRAINT type_pkey PRIMARY KEY (name);
+
+
+--
+-- Name: move_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY move
+    ADD CONSTRAINT move_type_fkey FOREIGN KEY (type) REFERENCES type(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_evolves_to_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_evolves_to_fkey FOREIGN KEY (evolves_to) REFERENCES pokemon(pokedex_num) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_move1_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_move1_fkey FOREIGN KEY (move1) REFERENCES move(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_move2_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_move2_fkey FOREIGN KEY (move2) REFERENCES move(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_move3_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_move3_fkey FOREIGN KEY (move3) REFERENCES move(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_move4_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_move4_fkey FOREIGN KEY (move4) REFERENCES move(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_type1_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_type1_fkey FOREIGN KEY (type1) REFERENCES type(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: pokemon_type2_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY pokemon
+    ADD CONSTRAINT pokemon_type2_fkey FOREIGN KEY (type2) REFERENCES type(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: strong_against_strong_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY strong_against
+    ADD CONSTRAINT strong_against_strong_type_fkey FOREIGN KEY (strong_type) REFERENCES type(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: strong_against_weak_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY strong_against
+    ADD CONSTRAINT strong_against_weak_type_fkey FOREIGN KEY (weak_type) REFERENCES type(name) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: trains_pokedex_num_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY trains
+    ADD CONSTRAINT trains_pokedex_num_fkey FOREIGN KEY (pokedex_num) REFERENCES pokemon(pokedex_num) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: trains_tid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: admin
+--
+
+ALTER TABLE ONLY trains
+    ADD CONSTRAINT trains_tid_fkey FOREIGN KEY (tid) REFERENCES trainer(tid) ON UPDATE CASCADE ON DELETE CASCADE;
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: sasharudyakov
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM sasharudyakov;
+GRANT ALL ON SCHEMA public TO sasharudyakov;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
