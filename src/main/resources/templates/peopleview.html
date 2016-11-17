@@ -17,6 +17,7 @@
         <th>Move2</th>
         <th>Move3</th>
         <th>Move4</th>
+        <th>Sprite</th>
         <th>Action</th>
     </thead>
     <tbody>
@@ -32,6 +33,9 @@
             <td th:text="${person.move3}">A Smoke Test'</td>
             <td th:text="${person.move4}">A Smoke Test'</td>
             <td>
+                <img th:src="${person.sprite}" width="50px" height="50px" />
+            </td>
+            <td>
                 <a href="#" data-th-href="@{/edit(id=${person.pokedexNum})}">edit</a>
                 <a href="#" data-th-href="@{/delete(id=${person.pokedexNum})}">delete</a>
             </td>
@@ -45,6 +49,5 @@
 <form action="#" th:action="@{/types}" method="get">
     <input type="submit" value="view types" />
 </form>
-<img src="../../images/giratina.gif" width="50px" height="50px" />
 </body>
 </html>

@@ -55,6 +55,7 @@ class PersonService  {
         updateQuery.set(Pokemon.POKEMON.MOVE2, p.getMove2())
         updateQuery.set(Pokemon.POKEMON.MOVE3, p.getMove3())
         updateQuery.set(Pokemon.POKEMON.MOVE4, p.getMove4())
+        updateQuery.set(Pokemon.POKEMON.SPRITE, p.getSprite())
         updateQuery.where(Pokemon.POKEMON.POKEDEX_NUM.equal(p.getPokedexNum())).execute()
     }
 
@@ -69,7 +70,8 @@ class PersonService  {
                 Pokemon.POKEMON.MOVE1,
                 Pokemon.POKEMON.MOVE2,
                 Pokemon.POKEMON.MOVE3,
-                Pokemon.POKEMON.MOVE4
+                Pokemon.POKEMON.MOVE4,
+                Pokemon.POKEMON.SPRITE
         ).values(
                 p.getPokedexNum(),
                 p.getName(),
@@ -79,7 +81,8 @@ class PersonService  {
                 p.getMove1(),
                 p.getMove2(),
                 p.getMove3(),
-                p.getMove4()
+                p.getMove4(),
+                p.getSprite()
         ).execute()
     }
 
