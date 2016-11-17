@@ -39,7 +39,7 @@ jar {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName = 'com.thirdchannel.Application'
+mainClassName = 'com.pokemon.Application'
 
 /*
 run {
@@ -100,36 +100,36 @@ test {
 }
 
 
-jooq {
-    thirdchannel(sourceSets.main) {
-        jdbc {
-            driver = 'org.postgresql.Driver'
-            url = 'jdbc:postgresql://localhost:5432/testDatabase'
-            user = 'sasharudyakov'
-            password = ''
-            schema = 'public'
-        }
-        generator {
-            name = 'org.jooq.util.DefaultGenerator'
-            strategy {
-                name = 'org.jooq.util.DefaultGeneratorStrategy'
-            }
-            database {
-                name = 'org.jooq.util.postgres.PostgresDatabase'
-            }
-            generate {
-                relations = true
-                deprecated = false
-                records = true
-                immutablePojos = true
-                fluentSetters = true
-
-            }
-            target {
-                packageName = 'com.thirdchannel.db'
-                 directory = 'src/main/java'
-            }
-        }
-    }
-}
+//jooq {
+//    thirdchannel(sourceSets.main) {
+//        jdbc {
+//            driver = 'org.postgresql.Driver'
+//            url = 'jdbc:postgresql://localhost:5432/pokemon'
+//            user = 'sasharudyakov'
+//            password = ''
+//            schema = 'public'
+//        }
+//        generator {
+//            name = 'org.jooq.util.DefaultGenerator'
+//            strategy {
+//                name = 'org.jooq.util.DefaultGeneratorStrategy'
+//            }
+//            database {
+//                name = 'org.jooq.util.postgres.PostgresDatabase'
+//            }
+//            generate {
+//                relations = true
+//                deprecated = false
+//                records = true
+//                immutablePojos = true
+//                fluentSetters = true
+//
+//            }
+//            target {
+//                packageName = 'com.thirdchannel.db'
+//                 directory = 'src/main/java'
+//            }
+//        }
+//    }
+//}
 
