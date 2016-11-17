@@ -27,7 +27,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TrainsRecord extends UpdatableRecordImpl<TrainsRecord> implements Record2<Integer, Integer> {
 
-	private static final long serialVersionUID = -589272816;
+	private static final long serialVersionUID = -1509394694;
 
 	/**
 	 * Setter for <code>public.trains.pokedex_num</code>.

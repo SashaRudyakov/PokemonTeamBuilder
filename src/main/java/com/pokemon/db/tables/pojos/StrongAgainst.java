@@ -22,7 +22,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StrongAgainst implements Serializable {
 
-	private static final long serialVersionUID = 1832456915;
+	private static final long serialVersionUID = 1321377518;
 
 	private final String weakType;
 	private final String strongType;

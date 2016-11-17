@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Move extends TableImpl<MoveRecord> {
 
-	private static final long serialVersionUID = -396545525;
+	private static final long serialVersionUID = 1951930583;
 
 	/**
 	 * The reference instance of <code>public.move</code>

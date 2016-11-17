@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StrongAgainst extends TableImpl<StrongAgainstRecord> {
 
-	private static final long serialVersionUID = 632299988;
+	private static final long serialVersionUID = 2012682120;
 
 	/**
 	 * The reference instance of <code>public.strong_against</code>

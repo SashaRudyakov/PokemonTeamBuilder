@@ -29,7 +29,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TrainerRecord extends UpdatableRecordImpl<TrainerRecord> implements Record5<String, Integer, Gender, Integer, String> {
 
-	private static final long serialVersionUID = -608134742;
+	private static final long serialVersionUID = -1631715843;
 
 	/**
 	 * Setter for <code>public.trainer.name</code>.

@@ -22,7 +22,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Move implements Serializable {
 
-	private static final long serialVersionUID = 1299138781;
+	private static final long serialVersionUID = 953313954;
 
 	private final String  name;
 	private final Integer strength;
