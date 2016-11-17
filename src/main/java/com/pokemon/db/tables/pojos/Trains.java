@@ -22,7 +22,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Trains implements Serializable {
 
-	private static final long serialVersionUID = -1076894822;
+	private static final long serialVersionUID = 55975285;
 
 	private final Integer pokedexNum;
 	private final Integer tid;

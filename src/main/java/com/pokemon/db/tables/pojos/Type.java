@@ -22,11 +22,9 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Type implements Serializable {
 
-	private static final long serialVersionUID = -738620893;
+	private static final long serialVersionUID = -1394931224;
 
-	String name;
-
-	public Type() {}
+	private final String name;
 
 	public Type(Type value) {
 		this.name = value.name;
@@ -41,8 +39,6 @@ public class Type implements Serializable {
 	public String getName() {
 		return this.name;
 	}
-
-	public void setName(String name) { this.name = name; }
 
 	@Override
 	public String toString() {

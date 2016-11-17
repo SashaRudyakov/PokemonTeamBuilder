@@ -5,7 +5,6 @@ package com.pokemon.db.tables.pojos;
 
 
 import java.io.Serializable;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.Generated;
 
@@ -23,7 +22,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class PokemonP implements Serializable {
 
-	private static final long serialVersionUID = 1737010514;
+	private static final long serialVersionUID = -753396290;
 
 	String  name;
 	Integer pokedexNum;
@@ -34,18 +33,9 @@ public class PokemonP implements Serializable {
 	String  move2;
 	String  move3;
 	String  move4;
+	String  sprite;
 
-	public PokemonP() {
-//		this.name = null;
-//		this.pokedexNum = null;
-//		this.evolvesTo = null;
-//		this.type1 = null;
-//		this.type2 = null;
-//		this.move1 = null;
-//		this.move2 = null;
-//		this.move3 = null;
-//		this.move4 = null;
-	}
+	public PokemonP() {}
 
 	public PokemonP(PokemonP value) {
 		this.name = value.name;
@@ -57,6 +47,7 @@ public class PokemonP implements Serializable {
 		this.move2 = value.move2;
 		this.move3 = value.move3;
 		this.move4 = value.move4;
+		this.sprite = value.sprite;
 	}
 
 	public PokemonP(
@@ -68,7 +59,8 @@ public class PokemonP implements Serializable {
 		String  move1,
 		String  move2,
 		String  move3,
-		String  move4
+		String  move4,
+		String  sprite
 	) {
 		this.name = name;
 		this.pokedexNum = pokedexNum;
@@ -79,6 +71,7 @@ public class PokemonP implements Serializable {
 		this.move2 = move2;
 		this.move3 = move3;
 		this.move4 = move4;
+		this.sprite = sprite;
 	}
 
 	public String getName() {
@@ -117,8 +110,12 @@ public class PokemonP implements Serializable {
 		return this.move4;
 	}
 
-	public void setName(String name) { this.name = name; }
+	public String getSprite() {
+		return this.sprite;
+	}
+
 	public void setPokedexNum(Integer pokedexNum) { this.pokedexNum = pokedexNum; }
+	public void setName(String name) { this.name = name; }
 	public void setEvolvesTo(Integer evolvesTo) { this.evolvesTo = evolvesTo; }
 	public void setType1(String type1) { this.type1 = type1; }
 	public void setType2(String type2) { this.type2 = type2; }
@@ -126,6 +123,7 @@ public class PokemonP implements Serializable {
 	public void setMove2(String move2) { this.move2 = move2; }
 	public void setMove3(String move3) { this.move3 = move3; }
 	public void setMove4(String move4) { this.move4 = move4; }
+	public void setSprite(String sprite) { this.sprite = sprite; }
 
 	@Override
 	public String toString() {
@@ -140,6 +138,7 @@ public class PokemonP implements Serializable {
 		sb.append(", ").append(move2);
 		sb.append(", ").append(move3);
 		sb.append(", ").append(move4);
+		sb.append(", ").append(sprite);
 
 		sb.append(")");
 		return sb.toString();

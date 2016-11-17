@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Trains extends TableImpl<TrainsRecord> {
 
-	private static final long serialVersionUID = 360391506;
+	private static final long serialVersionUID = 622801670;
 
 	/**
 	 * The reference instance of <code>public.trains</code>

@@ -27,7 +27,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TypeRecord extends UpdatableRecordImpl<TypeRecord> implements Record1<String> {
 
-	private static final long serialVersionUID = -1876179115;
+	private static final long serialVersionUID = 1853489195;
 
 	/**
 	 * Setter for <code>public.type.name</code>.

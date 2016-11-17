@@ -24,7 +24,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Trainer implements Serializable {
 
-	private static final long serialVersionUID = -335016763;
+	private static final long serialVersionUID = -741477151;
 
 	private final String  name;
 	private final Integer tid;

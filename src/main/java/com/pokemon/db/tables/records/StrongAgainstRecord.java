@@ -27,7 +27,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StrongAgainstRecord extends UpdatableRecordImpl<StrongAgainstRecord> implements Record2<String, String> {
 
-	private static final long serialVersionUID = -480463121;
+	private static final long serialVersionUID = 1182288601;
 
 	/**
 	 * Setter for <code>public.strong_against.weak_type</code>.

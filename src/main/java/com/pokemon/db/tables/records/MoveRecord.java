@@ -28,7 +28,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MoveRecord extends UpdatableRecordImpl<MoveRecord> implements Record5<String, Integer, String, String, String> {
 
-	private static final long serialVersionUID = -523648641;
+	private static final long serialVersionUID = -538144663;
 
 	/**
 	 * Setter for <code>public.move.name</code>.
