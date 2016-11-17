@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Sasha's Awesome Webpage</title>
+</head>
+<th>Create a new person</th>
+<body>
+<form action="#" th:action="@{/processCreate}" th:object="${person}" method="post">
+    Age <input type="text" th:field="*{age}" />
+    First Name <input type="text" th:field="*{firstName}" />
+    Last Name <input type="text" th:field="*{lastName}" />
+    <input type="submit" />
+</form>
+</body>
+</html>

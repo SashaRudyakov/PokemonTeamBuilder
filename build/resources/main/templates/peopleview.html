@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Sasha's Awesome Webpage</title>
+</head>
+<h3> People </h3>
+<body>
+<table border="1" style="width:300px">
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+    <th:block th:each="person : ${people}">
+        <tr>
+            <td th:text="${person.firstName}">A Smoke Test'</td>
+            <td th:text="${person.lastName}">A Smoke Test'</td>
+            <td th:text="${person.age}"></td>
+            <td>
+                <a href="#" data-th-href="@{/edit(id=${person.id})}">edit</a>
+                <a href="#" data-th-href="@{/delete(id=${person.id})}">delete</a>
+            </td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<form action="#" th:action="@{/create}" method="get">
+    <input type="submit" value="create" />
+</form>
+</body>
+</html>
