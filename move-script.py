@@ -9,8 +9,14 @@ try:
 except:
     print "I am unable to connect to the database"
 
+cur = conn.cursor()
+
 # there are 621 moves in the API
-for i in range(1, 4):
+for i in range(1, 622):
+    print(str(i))
+
+    value_dict = {}
+
     response_json = requests.get(url + str(i)).json()
     name = response_json["name"].replace("-", " ")
     strength = response_json["power"]
@@ -24,7 +30,6 @@ for i in range(1, 4):
     for e in effect_list:
         if e["language"]["name"] == "en":
             # moves that have no effect should be null
-            print("hello")
             if "with no additional effect" not in e["short_effect"]:
                 effect = e["short_effect"].replace("\n", " ")
             break
@@ -33,4 +38,14 @@ for i in range(1, 4):
     for d in description_list:
         if d["language"]["name"] == "en":
             description = d["flavor_text"].replace("\n", " ")
+            break
 
+    # add this move to the database
+    try:
+        cur.execute("""INSERT INTO move(name, strength, effect, description, type) VALUES (%s, %s, %s, %s, %s)""",
+                    (name, strength, effect, description, move_type))
+        print("Successfully added move " + str(i))
+    except:
+        print("Could not insert move " + str(i))
+
+conn.commit()
