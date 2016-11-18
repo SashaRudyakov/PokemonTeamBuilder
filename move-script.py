@@ -13,13 +13,13 @@ cur = conn.cursor()
 
 # there are 621 moves in the API
 for i in range(1, 622):
-    print(str(i))
+    print("Move " + str(i))
 
     value_dict = {}
 
     response_json = requests.get(url + str(i)).json()
     name = response_json["name"].replace("-", " ")
-    strength = response_json["power"]
+    strength = response_json["power"] if (response_json["power"] is not None) else 0
     effect_list = response_json["effect_entries"]
     effect = None
     move_type = response_json["type"]["name"]
