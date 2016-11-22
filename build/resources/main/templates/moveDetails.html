@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Sasha's Awesome Webpage</title>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/form.scss" th:href="@{/css/form.scss}"/>
+</head>
+<h3 th:inline="text">
+    [[${#strings.capitalize(move.name)}]]</h3>
+<form th:object="${move}">
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" readonly="readonly" th:field="*{name}" th:value="*{name}" />
+    </div>
+    <div class="form-group">
+        <label>Strength</label>
+        <input class="form-control" type="text" readonly="readonly" th:field="*{strength}" th:value="*{strength}" />
+    </div>
+    <div class="form-group">
+        <label>Effect</label>
+        <input class="form-control" readonly="readonly" type="text" th:field="*{effect}" th:value="*{effect}"/>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" readonly="readonly" rows="4" cols="50" type="text" th:field="*{description}" th:value="*{description}"/>
+    </div>
+    <div class="form-group">
+        <label>Type</label>
+        <input class="form-control" readonly="readonly" type="text" th:field="*{type}" th:value="*{type}"/>
+    </div>
+</form>
+</html>

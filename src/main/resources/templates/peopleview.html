@@ -31,10 +31,22 @@
             <td th:text="${person.evolvesTo}">A Smoke Test'</td>
             <td th:text="${person.type1}">A Smoke Test'</td>
             <td th:text="${person.type2}">A Smoke Test'</td>
-            <td th:text="${person.move1}">A Smoke Test'</td>
-            <td th:text="${person.move2}">A Smoke Test'</td>
-            <td th:text="${person.move3}">A Smoke Test'</td>
-            <td th:text="${person.move4}">A Smoke Test'</td>
+            <td>
+                <div th:text="${person.move1}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${person.move1})}">details</a>
+            </td>
+            <td>
+                <div th:text="${person.move2}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${person.move2})}">details</a>
+            </td>
+            <td>
+                <div th:text="${person.move3}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${person.move3})}">details</a>
+            </td>
+            <td>
+                <div th:text="${person.move4}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${person.move4})}">details</a>
+            </td>
             <td>
                 <img th:src="'../../sprites/' + ${person.pokedexNum} + '.png'" width="100px" height="100px" />
             </td>

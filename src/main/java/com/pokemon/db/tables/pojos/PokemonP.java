@@ -22,7 +22,7 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class PokemonP implements Serializable {
 
-	private static final long serialVersionUID = -753396290;
+	private static final long serialVersionUID = 1087423383;
 
 	String  name;
 	Integer pokedexNum;
@@ -33,7 +33,6 @@ public class PokemonP implements Serializable {
 	String  move2;
 	String  move3;
 	String  move4;
-	String  sprite;
 
 	public PokemonP() {}
 
@@ -47,7 +46,6 @@ public class PokemonP implements Serializable {
 		this.move2 = value.move2;
 		this.move3 = value.move3;
 		this.move4 = value.move4;
-		this.sprite = value.sprite;
 	}
 
 	public PokemonP(
@@ -59,8 +57,7 @@ public class PokemonP implements Serializable {
 		String  move1,
 		String  move2,
 		String  move3,
-		String  move4,
-		String  sprite
+		String  move4
 	) {
 		this.name = name;
 		this.pokedexNum = pokedexNum;
@@ -71,7 +68,6 @@ public class PokemonP implements Serializable {
 		this.move2 = move2;
 		this.move3 = move3;
 		this.move4 = move4;
-		this.sprite = sprite;
 	}
 
 	public String getName() {
@@ -110,10 +106,6 @@ public class PokemonP implements Serializable {
 		return this.move4;
 	}
 
-	public String getSprite() {
-		return this.sprite;
-	}
-
 	public void setPokedexNum(Integer pokedexNum) { this.pokedexNum = pokedexNum; }
 	public void setName(String name) { this.name = name; }
 	public void setEvolvesTo(Integer evolvesTo) { this.evolvesTo = evolvesTo; }
@@ -123,7 +115,6 @@ public class PokemonP implements Serializable {
 	public void setMove2(String move2) { this.move2 = move2; }
 	public void setMove3(String move3) { this.move3 = move3; }
 	public void setMove4(String move4) { this.move4 = move4; }
-	public void setSprite(String sprite) { this.sprite = sprite; }
 
 	@Override
 	public String toString() {
@@ -138,7 +129,6 @@ public class PokemonP implements Serializable {
 		sb.append(", ").append(move2);
 		sb.append(", ").append(move3);
 		sb.append(", ").append(move4);
-		sb.append(", ").append(sprite);
 
 		sb.append(")");
 		return sb.toString();

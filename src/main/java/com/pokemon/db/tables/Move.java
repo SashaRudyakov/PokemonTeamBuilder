@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Move extends TableImpl<MoveRecord> {
 
-	private static final long serialVersionUID = 1951930583;
+	private static final long serialVersionUID = 558626031;
 
 	/**
 	 * The reference instance of <code>public.move</code>
@@ -62,12 +62,12 @@ public class Move extends TableImpl<MoveRecord> {
 	/**
 	 * The column <code>public.move.effect</code>.
 	 */
-	public final TableField<MoveRecord, String> EFFECT = createField("effect", org.jooq.impl.SQLDataType.VARCHAR.length(45), this, "");
+	public final TableField<MoveRecord, String> EFFECT = createField("effect", org.jooq.impl.SQLDataType.VARCHAR.length(512), this, "");
 
 	/**
 	 * The column <code>public.move.description</code>.
 	 */
-	public final TableField<MoveRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR.length(100).nullable(false), this, "");
+	public final TableField<MoveRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR.length(512).nullable(false), this, "");
 
 	/**
 	 * The column <code>public.move.type</code>.
