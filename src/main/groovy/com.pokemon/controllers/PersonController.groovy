@@ -40,6 +40,7 @@ public class PersonController {
     @RequestMapping(value = "/types", method = RequestMethod.GET)
     public ModelAndView types() {
         ModelAndView mav = new ModelAndView("typesView");
+        println personService.getTypes()
         mav.addObject("types", personService.getTypes());
         return mav;
     }
