@@ -67,7 +67,7 @@ ALTER TABLE move OWNER TO katelynsalvatori;
 CREATE TABLE pokemon (
     name character varying(45) NOT NULL,
     pokedex_num integer NOT NULL,
-    evolves_to integer,
+    evolves_from integer,
     type1 character varying(45) NOT NULL,
     type2 character varying(45),
     move1 character varying(45) NOT NULL,
@@ -790,383 +790,333 @@ hyperspace fury	100	Blocks damaging attacks and lowers attacking Pokémon's Atta
 -- Data for Name: pokemon; Type: TABLE DATA; Schema: public; Owner: katelynsalvatori
 --
 
-COPY pokemon (name, pokedex_num, evolves_to, type1, type2, move1, move2, move3, move4) FROM stdin;
+COPY pokemon (name, pokedex_num, evolves_from, type1, type2, move1, move2, move3, move4) FROM stdin;
+cinccino	573	572	normal	\N	aqua tail	work up	retaliate	fling
+whirlipede	544	543	poison	bug	snore	attract	return	poison sting
+scolipede	545	544	poison	bug	baton pass	iron tail	frustration	aqua tail
+crustle	558	557	rock	bug	confide	smack down	sleep talk	shadow claw
+monferno	391	390	fighting	fire	rock smash	fling	slack off	scratch
+luxio	404	403	electric	\N	bite	helping hand	captivate	charge
+swanna	581	580	flying	water	confide	dive	protect	ice beam
+vespiquen	416	415	flying	bug	rain dance	hone claws	venoshock	struggle bug
+cherrim	421	420	grass	\N	energy ball	round	sunny day	bullet seed
+prinplup	394	393	water	\N	hail	rock smash	brine	echoed voice
+floatzel	419	418	water	\N	sonic boom	rain dance	waterfall	secret power
+toxicroak	454	453	fighting	poison	thunder punch	fury cutter	dig	rock slide
+gastrodon	423	422	ground	water	protect	earth power	bulldoze	rest
+staraptor	398	397	flying	normal	brave bird	toxic	snore	return
+scrafty	560	559	fighting	dark	spite	sand attack	stone edge	dig
+bronzong	437	436	psychic	steel	hidden power	facade	shadow ball	grass knot
+sawsbuck	586	585	grass	normal	swagger	horn leech	leech seed	bounce
+duosion	578	577	psychic	\N	reflect	confide	double team	snatch
+stoutland	508	507	normal	\N	rain dance	after you	covet	frustration
+liepard	510	509	dark	\N	play rough	substitute	rock smash	assist
+purugly	432	431	normal	\N	slash	sunny day	body slam	last resort
+vanillish	583	582	ice	\N	rain dance	secret power	substitute	signal beam
+zoroark	571	570	dark	\N	hidden power	focus blast	bounce	roar
+reuniclus	579	578	psychic	\N	gravity	trick room	superpower	confide
 bulbasaur	1	\N	poison	grass	magical leaf	charm	worry seed	swagger
-ivysaur	2	\N	poison	grass	defense curl	seed bomb	mega drain	curse
-venusaur	3	\N	poison	grass	toxic	giga drain	flash	block
 charmander	4	\N	fire	\N	hidden power	take down	mimic	dynamic punch
-charmeleon	5	\N	fire	\N	skull bash	bide	headbutt	cut
-charizard	6	\N	flying	fire	iron tail	snore	substitute	endure
+unfezant	521	520	flying	normal	substitute	fly	sunny day	round
 squirtle	7	\N	water	\N	power up punch	rollout	icy wind	counter
-wartortle	8	\N	water	\N	rock smash	secret power	mimic	swagger
-blastoise	9	\N	water	\N	rage	sleep talk	bite	strength
+leavanny	542	541	grass	bug	heal bell	hyper beam	rest	synthesis
+watchog	505	504	normal	\N	double team	after you	round	cut
+garbodor	569	568	poison	\N	double team	acid spray	body slam	clear smog
+boldore	525	524	rock	\N	power gem	block	substitute	return
+archeops	567	566	flying	rock	outrage	steel wing	substitute	dig
 caterpie	10	\N	bug	\N	snore	tackle	bug bite	string shot
-metapod	11	\N	bug	\N	iron defense	harden	bug bite	string shot
-butterfree	12	\N	flying	bug	double team	safeguard	poison powder	hyper beam
+skuntank	435	434	dark	poison	confide	endure	roar	frustration
 weedle	13	\N	poison	bug	poison sting	string shot	bug bite	electroweb
-kakuna	14	\N	poison	bug	electroweb	bug bite	iron defense	string shot
-beedrill	15	\N	poison	bug	air cutter	double edge	bide	pin missile
+lumineon	457	456	water	\N	giga impact	ominous wind	facade	double team
 pidgey	16	\N	flying	normal	substitute	pursuit	twister	secret power
-pidgeotto	17	\N	flying	normal	hurricane	reflect	sky attack	tackle
-pidgeot	18	\N	flying	normal	mirror move	steel wing	work up	double team
 rattata	19	\N	normal	\N	focus energy	thunder	secret power	sleep talk
-raticate	20	\N	normal	\N	grass knot	pursuit	swagger	retaliate
+grotle	388	387	grass	\N	endure	toxic	sunny day	tackle
 spearow	21	\N	flying	normal	protect	roost	ominous wind	work up
-fearow	22	\N	flying	normal	whirlwind	round	peck	captivate
 ekans	23	\N	poison	\N	captivate	spit up	swallow	gastro acid
-arbok	24	\N	poison	\N	mimic	secret power	endure	fire fang
-pikachu	25	\N	electric	\N	defense curl	zap cannon	discharge	swagger
-raichu	26	\N	electric	\N	return	double edge	dig	mimic
 sandshrew	27	\N	ground	\N	scratch	chip away	slash	attract
-sandslash	28	\N	ground	\N	dynamic punch	secret power	safeguard	rapid spin
 nidoran f	29	\N	poison	\N	rain dance	beat up	substitute	flatter
-nidorina	30	\N	poison	\N	thief	curse	mimic	crunch
-nidoqueen	31	\N	ground	poison	thief	earth power	dragon tail	shock wave
 nidoran m	32	\N	poison	\N	round	captivate	poison sting	iron tail
-nidorino	33	\N	poison	\N	ice beam	water gun	frustration	hidden power
-nidoking	34	\N	ground	poison	headbutt	confide	peck	bubble beam
-clefairy	35	\N	fairy	\N	ice beam	bubble beam	heal bell	fire blast
-clefable	36	\N	fairy	\N	rest	natural gift	drain punch	double team
 vulpix	37	\N	fire	\N	ember	endure	captivate	grudge
-ninetales	38	\N	fire	\N	sunny day	overheat	will o wisp	spite
-jigglypuff	39	\N	fairy	normal	fire blast	psywave	hidden power	safeguard
-wigglytuff	40	\N	fairy	normal	shock wave	magic coat	tri attack	seismic toss
 zubat	41	\N	flying	poison	aerial ace	uproar	substitute	rain dance
-golbat	42	\N	flying	poison	roost	round	mimic	tailwind
 oddish	43	\N	poison	grass	natural gift	rage	ingrain	protect
-gloom	44	\N	poison	grass	flash	seed bomb	petal dance	lucky chant
-vileplume	45	\N	poison	grass	mimic	body slam	facade	stun spore
 paras	46	\N	grass	bug	knock off	aromatherapy	pursuit	spore
-parasect	47	\N	grass	bug	hone claws	fury cutter	swagger	stun spore
 venonat	48	\N	poison	bug	endure	confusion	natural gift	mega drain
-venomoth	49	\N	poison	bug	venoshock	defog	sleep talk	stun spore
 diglett	50	\N	ground	\N	magnitude	sandstorm	feint attack	hidden power
-dugtrio	51	\N	ground	\N	curse	tri attack	growl	fury swipes
+charmeleon	5	4	fire	\N	skull bash	bide	headbutt	cut
+venusaur	3	2	poison	grass	toxic	giga drain	flash	block
+fearow	22	21	flying	normal	whirlwind	round	peck	captivate
+jigglypuff	39	174	fairy	normal	fire blast	psywave	hidden power	safeguard
+sandslash	28	27	ground	\N	dynamic punch	secret power	safeguard	rapid spin
+wigglytuff	40	39	fairy	normal	shock wave	magic coat	tri attack	seismic toss
+clefable	36	35	fairy	\N	rest	natural gift	drain punch	double team
+gloom	44	43	poison	grass	flash	seed bomb	petal dance	lucky chant
+nidoqueen	31	30	ground	poison	thief	earth power	dragon tail	shock wave
+pikachu	25	172	electric	\N	defense curl	zap cannon	discharge	swagger
+wartortle	8	7	water	\N	rock smash	secret power	mimic	swagger
+parasect	47	46	grass	bug	hone claws	fury cutter	swagger	stun spore
+pidgeotto	17	16	flying	normal	hurricane	reflect	sky attack	tackle
+venomoth	49	48	poison	bug	venoshock	defog	sleep talk	stun spore
+nidorino	33	32	poison	\N	ice beam	water gun	frustration	hidden power
+nidorina	30	29	poison	\N	thief	curse	mimic	crunch
+nidoking	34	33	ground	poison	headbutt	confide	peck	bubble beam
+metapod	11	10	bug	\N	iron defense	harden	bug bite	string shot
+ivysaur	2	1	poison	grass	defense curl	seed bomb	mega drain	curse
+pidgeot	18	17	flying	normal	mirror move	steel wing	work up	double team
+ninetales	38	37	fire	\N	sunny day	overheat	will o wisp	spite
+clefairy	35	173	fairy	\N	ice beam	bubble beam	heal bell	fire blast
+dugtrio	51	50	ground	\N	curse	tri attack	growl	fury swipes
+blastoise	9	8	water	\N	rage	sleep talk	bite	strength
+beedrill	15	14	poison	bug	air cutter	double edge	bide	pin missile
+arbok	24	23	poison	\N	mimic	secret power	endure	fire fang
 meowth	52	\N	normal	\N	psych up	thief	defense curl	punishment
-persian	53	\N	normal	\N	bubble beam	water pulse	attract	feint
+kricketune	402	401	bug	\N	sing	captivate	swords dance	endeavor
 psyduck	54	\N	water	\N	aerial ace	ice beam	toxic	tail whip
-golduck	55	\N	water	\N	water gun	low kick	wonder room	headbutt
+emboar	500	499	fighting	fire	rock smash	confide	strength	poison jab
 mankey	56	\N	fighting	\N	karate chop	focus energy	snore	foresight
-primeape	57	\N	fighting	\N	earthquake	mimic	covet	skull bash
+drifblim	426	425	flying	ghost	protect	cut	secret power	hidden power
 growlithe	58	\N	fire	\N	fire blast	round	fire spin	flamethrower
-arcanine	59	\N	fire	\N	will o wisp	dragon breath	thunder fang	roar
+mothim	414	412	flying	bug	solar beam	gust	confide	energy ball
 poliwag	60	\N	water	\N	bubble	scald	mind reader	mimic
-poliwhirl	61	\N	water	\N	whirlpool	blizzard	submission	return
-poliwrath	62	\N	fighting	water	confide	detect	seismic toss	metronome
+gigalith	526	525	rock	\N	rock polish	rock tomb	tackle	rock slide
+serperior	497	496	grass	\N	dragon tail	energy ball	wrap	secret power
 abra	63	\N	psychic	\N	sleep talk	ally switch	ice punch	captivate
-kadabra	64	\N	psychic	\N	attract	trick room	torment	confusion
-alakazam	65	\N	psychic	\N	ally switch	mega kick	reflect	drain punch
+carracosta	565	564	rock	water	rock slide	zen headbutt	ancient power	giga impact
+lopunny	428	427	normal	\N	charge beam	uproar	protect	defense curl
 machop	66	\N	fighting	\N	headbutt	rolling kick	snore	rain dance
-machoke	67	\N	fighting	\N	poison jab	seismic toss	skull bash	double edge
-machamp	68	\N	fighting	\N	submission	round	attract	endure
+seismitoad	537	536	ground	water	focus punch	bounce	giga impact	hail
+abomasnow	460	459	ice	grass	icy wind	light screen	ice punch	mist
 bellsprout	69	\N	poison	grass	clear smog	sunny day	wrap	giga drain
-weepinbell	70	\N	poison	grass	stun spore	rest	knock off	cut
-victreebel	71	\N	poison	grass	flash	bug bite	razor leaf	spit up
+tranquill	520	519	flying	normal	razor wind	quick attack	double team	work up
+garchomp	445	444	ground	dragon	fury cutter	dig	fire fang	rest
 tentacool	72	\N	poison	water	barrier	rest	endure	bind
-tentacruel	73	\N	poison	water	swagger	acid spray	brine	take down
+luxray	405	404	electric	\N	thunder fang	headbutt	round	flash
 geodude	74	\N	ground	rock	rock tomb	body slam	fissure	rollout
-graveler	75	\N	ground	rock	earth power	bulldoze	smack down	rock tomb
-golem	76	\N	ground	rock	mud sport	mega kick	mud slap	metronome
+bastiodon	411	410	steel	rock	fire blast	taunt	torment	metal sound
+gurdurr	533	532	fighting	\N	block	facade	frustration	rock slide
 ponyta	77	\N	fire	\N	confide	stomp	facade	rage
-rapidash	78	\N	fire	\N	strength	fire spin	swift	rest
+drapion	452	451	dark	poison	torment	swagger	sleep talk	fling
 slowpoke	79	\N	psychic	water	ice beam	water pulse	trick	skill swap
-slowbro	80	\N	psychic	water	submission	protect	nightmare	telekinesis
+torterra	389	388	ground	grass	razor leaf	rock tomb	leaf storm	protect
 magnemite	81	\N	steel	electric	double team	thunder wave	tackle	swagger
-magneton	82	\N	steel	electric	double team	return	lock on	frustration
+bibarel	400	399	water	normal	strength	shadow ball	mud slap	sleep talk
 farfetchd	83	\N	flying	normal	night slash	endure	facade	quick attack
 doduo	84	\N	flying	normal	quick attack	peck	snore	thief
-dodrio	85	\N	flying	normal	curse	swift	swagger	fly
+excadrill	530	529	steel	ground	drill run	swords dance	sludge bomb	fury swipes
 seel	86	\N	water	\N	fake out	whirlpool	drill run	stockpile
-dewgong	87	\N	ice	water	icy wind	hyper beam	headbutt	double edge
+gothitelle	576	575	psychic	\N	psybeam	protect	payback	rain dance
 grimer	88	\N	poison	\N	haze	self destruct	rest	shadow ball
-muk	89	\N	poison	\N	natural gift	thunder	thunderbolt	mud bomb
+whimsicott	547	546	fairy	grass	grass knot	confide	sunny day	covet
 shellder	90	\N	water	\N	double team	facade	twineedle	mud shot
-cloyster	91	\N	ice	water	round	hyper beam	water gun	rage
+gabite	444	443	ground	dragon	dragon rage	dig	toxic	twister
 gastly	92	\N	poison	ghost	double team	swagger	torment	hypnosis
-haunter	93	\N	poison	ghost	sunny day	dazzling gleam	destiny bond	ice punch
-gengar	94	\N	poison	ghost	metronome	curse	torment	ominous wind
+pignite	499	498	fighting	fire	endeavor	covet	odor sleuth	snore
+simipour	516	515	water	\N	hail	grass knot	ice beam	dig
 onix	95	\N	ground	rock	strength	snore	hidden power	iron tail
 drowzee	96	\N	psychic	\N	thunder wave	trick room	endure	dynamic punch
-hypno	97	\N	psychic	\N	skill swap	reflect	zen headbutt	double team
+lilligant	549	548	grass	\N	synthesis	sleep talk	dream eater	teeter dance
 krabby	98	\N	water	\N	brine	bide	ice beam	ancient power
-kingler	99	\N	water	\N	brick break	endure	wide guard	attract
+staravia	397	396	flying	normal	brave bird	agility	retaliate	work up
 voltorb	100	\N	electric	\N	thunderbolt	rest	reflect	discharge
-electrode	101	\N	electric	\N	flash	rage	explosion	snore
+swadloon	541	540	grass	bug	string shot	dream eater	synthesis	giga drain
 exeggcute	102	\N	psychic	grass	self destruct	barrage	explosion	psychic
-exeggutor	103	\N	psychic	grass	gravity	hyper beam	psych up	endure
+samurott	503	502	water	\N	retaliate	iron tail	grass knot	hidden power
 cubone	104	\N	ground	\N	smack down	incinerate	tail whip	headbutt
-marowak	105	\N	ground	\N	attract	knock off	bone club	double edge
-hitmonlee	106	\N	fighting	\N	mega punch	attract	retaliate	confide
-hitmonchan	107	\N	fighting	\N	captivate	mimic	bulk up	brick break
+krokorok	552	551	dark	ground	strength	sand tomb	double team	retaliate
+krookodile	553	552	dark	ground	return	rage	bulldoze	bulk up
+lucario	448	447	steel	fighting	brick break	low kick	me first	rest
 lickitung	108	\N	normal	\N	muddy water	incinerate	submission	fire blast
 koffing	109	\N	poison	\N	mimic	spite	double team	clear smog
-weezing	110	\N	poison	\N	confide	frustration	protect	toxic
+escavalier	589	588	steel	bug	bug buzz	giga impact	facade	secret power
 rhyhorn	111	\N	rock	ground	curse	rock tomb	zap cannon	metal burst
-rhydon	112	\N	rock	ground	captivate	chip away	rollout	hammer arm
-chansey	113	\N	normal	\N	return	bubble beam	safeguard	curse
+gothorita	575	574	psychic	\N	fling	dream eater	safeguard	calm mind
+rampardos	409	408	rock	\N	pain split	sandstorm	hyper beam	focus blast
 tangela	114	\N	grass	\N	grass knot	hidden power	growth	endeavor
 kangaskhan	115	\N	normal	\N	focus blast	cut	rest	low kick
 horsea	116	\N	water	\N	skull bash	hail	mimic	protect
-seadra	117	\N	water	\N	flash cannon	brine	captivate	sleep talk
+cofagrigus	563	562	ghost	\N	astonish	swagger	toxic	hex
 goldeen	118	\N	water	\N	flail	hydro pump	attract	blizzard
-seaking	119	\N	water	\N	hidden power	return	protect	supersonic
+vanilluxe	584	583	ice	\N	water pulse	ice beam	freeze dry	avalanche
 staryu	120	\N	water	\N	mimic	round	flash cannon	psywave
-starmie	121	\N	psychic	water	psych up	twister	signal beam	substitute
-mr mime	122	\N	fairy	psychic	calm mind	nasty plot	icy wind	psywave
 scyther	123	\N	flying	bug	wing attack	swift	focus energy	rain dance
-jynx	124	\N	psychic	ice	ice beam	heal bell	zen headbutt	lick
-electabuzz	125	\N	electric	\N	metronome	volt switch	substitute	electro ball
-magmar	126	\N	fire	\N	sunny day	body slam	covet	psywave
 pinsir	127	\N	bug	\N	confide	knock off	rock slide	focus blast
 tauros	128	\N	normal	\N	work up	fissure	double team	icy wind
 magikarp	129	\N	water	\N	tackle	splash	flail	bounce
-gyarados	130	\N	flying	water	thunder wave	return	reflect	dark pulse
 lapras	131	\N	ice	water	hyper beam	ice shard	rest	captivate
 eevee	133	\N	normal	\N	dig	growl	work up	synchronoise
-vaporeon	134	\N	water	\N	substitute	hyper beam	brine	muddy water
-jolteon	135	\N	electric	\N	curse	thunder wave	double edge	volt switch
-flareon	136	\N	fire	\N	flame charge	double team	incinerate	bide
+braixen	654	653	fire	\N	magic coat	thief	safeguard	incinerate
+delphox	655	654	psychic	fire	skill swap	cut	sunny day	low kick
 porygon	137	\N	normal	\N	thief	magnet rise	trick	thunder wave
 omanyte	138	\N	water	rock	return	water pulse	mimic	spikes
-omastar	139	\N	water	rock	sandstorm	shell smash	stone edge	constrict
+pyroar	668	667	normal	fire	fire blast	leer	swagger	flame charge
 kabuto	140	\N	water	rock	rock tomb	scald	bubble beam	toxic
-kabutops	141	\N	water	rock	submission	secret power	brick break	earth power
+chesnaught	652	651	fighting	grass	nature power	low sweep	rock smash	poison jab
 aerodactyl	142	\N	flying	rock	wide guard	rage	take down	aqua tail
-snorlax	143	\N	normal	\N	surf	heavy slam	metronome	secret power
+hydreigon	635	634	dragon	dark	psych up	torment	hyper voice	dragon pulse
 articuno	144	\N	flying	ice	steel wing	water pulse	u turn	hidden power
 zapdos	145	\N	flying	electric	sleep talk	wild charge	air cutter	twister
 moltres	146	\N	flying	fire	tailwind	wing attack	hidden power	pluck
 dratini	147	\N	dragon	\N	toxic	attract	headbutt	take down
-dragonair	148	\N	dragon	\N	iron tail	thunder	return	safeguard
-dragonite	149	\N	flying	dragon	sleep talk	dragon pulse	rain dance	ice punch
+talonflame	663	662	flying	fire	tailwind	fly	hidden power	growl
+golurk	623	622	ghost	ground	phantom force	rest	heavy slam	facade
 mewtwo	150	\N	psychic	\N	low kick	take down	incinerate	tri attack
 mew	151	\N	psychic	\N	hyper voice	rain dance	block	ominous wind
 chikorita	152	\N	grass	\N	grass knot	wring out	attract	growl
-bayleef	153	\N	grass	\N	reflect	iron tail	toxic	seed bomb
-meganium	154	\N	grass	\N	solar beam	endure	growl	bullet seed
+doublade	680	679	ghost	steel	rain dance	secret power	shadow claw	false swipe
+dragalge	691	690	dragon	poison	confide	water gun	waterfall	poison tail
 cyndaquil	155	\N	fire	\N	wild charge	substitute	aerial ace	quick attack
-quilava	156	\N	fire	\N	mud slap	swift	rest	frustration
-typhlosion	157	\N	fire	\N	earthquake	swift	inferno	roar
+pangoro	675	674	dark	fighting	facade	drain punch	dragon claw	aerial ace
+barbaracle	689	688	water	rock	water gun	sludge wave	x scissor	mud slap
 totodile	158	\N	water	\N	screech	mud slap	brick break	mimic
-croconaw	159	\N	water	\N	ice beam	rest	snore	fury cutter
-feraligatr	160	\N	water	\N	hone claws	slash	hail	avalanche
+mandibuzz	630	629	flying	dark	bone rush	embargo	psych up	roost
+fletchinder	662	661	flying	fire	growl	rest	me first	substitute
 sentret	161	\N	normal	\N	mud slap	follow me	double team	secret power
-furret	162	\N	normal	\N	brick break	dynamic punch	toxic	trick
+volcarona	637	636	fire	bug	psychic	silver wind	flame charge	ember
 hoothoot	163	\N	flying	normal	sunny day	psychic	defog	confusion
-noctowl	164	\N	flying	normal	thief	twister	sunny day	hyper beam
+aromatisse	683	682	fairy	\N	gyro ball	sunny day	skill swap	flash
 ledyba	165	\N	flying	bug	bide	safeguard	round	dig
-ledian	166	\N	flying	bug	frustration	thunder punch	hidden power	safeguard
+heliolisk	695	694	normal	electric	low kick	hyper voice	hidden power	rock tomb
 spinarak	167	\N	poison	bug	shadow sneak	screech	struggle bug	double team
-ariados	168	\N	poison	bug	infestation	return	psychic	hyper beam
-crobat	169	\N	flying	poison	snore	poison fang	dark pulse	acrobatics
+clawitzer	693	692	water	\N	splash	sludge wave	ice beam	icy wind
+trevenant	709	708	grass	ghost	cut	facade	frustration	round
 chinchou	170	\N	electric	water	mimic	mist	return	electro ball
-lanturn	171	\N	electric	water	flash	aqua tail	swallow	sleep talk
+tyrantrum	697	696	dragon	rock	sunny day	hone claws	frustration	sleep talk
 pichu	172	\N	electric	\N	mimic	swagger	covet	volt tackle
 cleffa	173	\N	fairy	\N	attract	nightmare	swagger	soft boiled
 igglybuff	174	\N	fairy	normal	psychic	misty terrain	water pulse	double team
 togepi	175	\N	fairy	\N	protect	bestow	trick	snore
-togetic	176	\N	flying	fairy	brick break	bestow	heal bell	defense curl
+zweilous	634	633	dragon	dark	draco meteor	spite	protect	psych up
 natu	177	\N	flying	psychic	shadow ball	simple beam	reflect	thief
-xatu	178	\N	flying	psychic	silver wind	sunny day	fly	zen headbutt
+floette	670	669	fairy	\N	nature power	misty terrain	wish	synthesis
 mareep	179	\N	electric	\N	curse	light screen	eerie impulse	facade
-flaaffy	180	\N	electric	\N	headbutt	cotton guard	toxic	return
-ampharos	181	\N	electric	\N	magnet rise	hidden power	mega kick	double edge
-bellossom	182	\N	grass	\N	petal blizzard	swagger	sludge bomb	solar beam
-marill	183	\N	fairy	water	whirlpool	camouflage	blizzard	scald
-azumarill	184	\N	fairy	water	bubble	scald	hyper beam	iron tail
-sudowoodo	185	\N	rock	\N	foul play	ice punch	mimic	sucker punch
-politoed	186	\N	water	\N	swagger	dive	bulldoze	payback
+accelgor	617	616	bug	\N	secret power	substitute	swagger	round
+diggersby	660	659	ground	normal	uproar	snore	double kick	recycle
+noivern	715	714	dragon	flying	sleep talk	fly	rest	uproar
+frogadier	657	656	water	\N	icy wind	blizzard	frustration	rock slide
+slurpuff	685	684	fairy	\N	secret power	giga impact	magic coat	thief
+braviary	628	627	flying	normal	hidden power	facade	peck	hone claws
+mienshao	620	619	fighting	\N	double slap	u turn	aura sphere	confide
 hoppip	187	\N	flying	grass	psych up	tail whip	grassy terrain	amnesia
-skiploom	188	\N	flying	grass	sweet scent	stun spore	swagger	toxic
-jumpluff	189	\N	flying	grass	psych up	facade	bullet seed	reflect
+vivillon	666	665	flying	bug	psych up	toxic	hyper beam	substitute
+greninja	658	657	dark	water	haze	return	water shuriken	shadow sneak
 aipom	190	\N	normal	\N	hidden power	acrobatics	dig	double slap
 sunkern	191	\N	grass	\N	giga drain	sweet scent	mimic	solar beam
-sunflora	192	\N	grass	\N	bullet seed	attract	swords dance	energy ball
+gogoat	673	672	grass	\N	roar	giga impact	growth	sleep talk
 yanma	193	\N	flying	bug	dream eater	feint attack	headbutt	feint
 wooper	194	\N	ground	water	endure	mimic	dynamic punch	bulldoze
-quagsire	195	\N	ground	water	water pulse	earthquake	scald	muddy water
-espeon	196	\N	psychic	\N	confusion	frustration	tackle	giga impact
-umbreon	197	\N	dark	\N	round	snatch	natural gift	moonlight
+malamar	687	686	psychic	dark	hyper beam	facade	calm mind	taunt
+sliggoo	705	704	dragon	\N	sleep talk	absorb	tackle	bide
+bisharp	625	624	steel	dark	rock smash	retaliate	brick break	swagger
 murkrow	198	\N	flying	dark	confide	confuse ray	icy wind	perish song
-slowking	199	\N	psychic	water	incinerate	skill swap	avalanche	flash
+quilladin	651	650	grass	\N	aerial ace	seed bomb	fling	brick break
 misdreavus	200	\N	ghost	\N	defense curl	mean look	heal bell	captivate
-wobbuffet	202	\N	psychic	\N	counter	destiny bond	safeguard	mirror coat
 girafarig	203	\N	psychic	normal	headbutt	foul play	flash	mud slap
 pineco	204	\N	bug	\N	solar beam	round	venoshock	captivate
-forretress	205	\N	steel	bug	strength	headbutt	snore	autotomize
 dunsparce	206	\N	normal	\N	thunder	double team	drill run	yawn
 gligar	207	\N	flying	ground	snore	aerial ace	stealth rock	fling
-steelix	208	\N	ground	steel	self destruct	dark pulse	natural gift	stone edge
 snubbull	209	\N	fairy	\N	rage	hyper voice	present	water pulse
-granbull	210	\N	fairy	\N	fire blast	mimic	rock slide	round
 qwilfish	211	\N	poison	water	spit up	gyro ball	rollout	shadow ball
-scizor	212	\N	steel	bug	fury cutter	agility	false swipe	mimic
 shuckle	213	\N	rock	bug	rock polish	guard split	ancient power	stone edge
 heracross	214	\N	fighting	bug	swords dance	bide	close combat	seismic toss
 sneasel	215	\N	ice	dark	surf	payback	dig	poison jab
+forretress	205	204	steel	bug	strength	headbutt	snore	autotomize
+wobbuffet	202	360	psychic	\N	counter	destiny bond	safeguard	mirror coat
+granbull	210	209	fairy	\N	fire blast	mimic	rock slide	round
 teddiursa	216	\N	normal	\N	snore	yawn	close combat	rain dance
-ursaring	217	\N	normal	\N	ice punch	hyper beam	leer	brick break
+avalugg	713	712	ice	\N	tackle	rock polish	rapid spin	toxic
 slugma	218	\N	fire	\N	inferno	captivate	nature power	hidden power
-magcargo	219	\N	rock	fire	strength	ember	sandstorm	double edge
+florges	671	670	fairy	\N	round	grassy terrain	wish	swagger
 swinub	220	\N	ground	ice	secret power	sandstorm	avalanche	light screen
-piloswine	221	\N	ground	ice	rain dance	strength	sleep talk	superpower
+aurorus	699	698	ice	rock	ice beam	hidden power	toxic	psychic
 corsola	222	\N	rock	water	endeavor	strength	psychic	scald
 remoraid	223	\N	water	\N	flail	captivate	incinerate	secret power
-octillery	224	\N	water	\N	rest	toxic	water gun	psychic
 delibird	225	\N	flying	ice	focus punch	sleep talk	bounce	body slam
-mantine	226	\N	flying	water	facade	confuse ray	mud sport	ice beam
 skarmory	227	\N	flying	steel	frustration	aerial ace	double edge	natural gift
 houndour	228	\N	fire	dark	payback	reversal	double team	body slam
-houndoom	229	\N	fire	dark	dark pulse	torment	roar	nightmare
-kingdra	230	\N	dragon	water	waterfall	double edge	flash cannon	smokescreen
 phanpy	231	\N	ground	\N	mud slap	superpower	tackle	slam
-donphan	232	\N	ground	\N	body slam	gyro ball	rest	sleep talk
-porygon2	233	\N	normal	\N	thief	defense curl	recover	tri attack
 stantler	234	\N	normal	\N	iron tail	calm mind	stomp	confuse ray
 tyrogue	236	\N	fighting	\N	endure	facade	double edge	body slam
-hitmontop	237	\N	fighting	\N	role play	endure	frustration	brick break
 smoochum	238	\N	psychic	ice	swagger	sweet kiss	dynamic punch	sweet scent
 elekid	239	\N	electric	\N	focus punch	thunder	dynamic punch	light screen
 magby	240	\N	fire	\N	snore	smog	clear smog	heat wave
 miltank	241	\N	normal	\N	confide	punishment	milk drink	headbutt
-blissey	242	\N	normal	\N	drain punch	facade	light screen	rain dance
 raikou	243	\N	electric	\N	snarl	quash	frustration	iron head
 entei	244	\N	fire	\N	giga impact	cut	overheat	dig
 suicune	245	\N	water	\N	scald	rain dance	hidden power	sandstorm
 larvitar	246	\N	ground	rock	earth power	mud slap	stealth rock	frustration
-pupitar	247	\N	ground	rock	substitute	body slam	leer	rest
-tyranitar	248	\N	dark	rock	whirlpool	body slam	avalanche	toxic
 lugia	249	\N	flying	psychic	fly	zen headbutt	iron tail	protect
 ho oh	250	\N	flying	fire	rain dance	sandstorm	overheat	double team
 celebi	251	\N	grass	psychic	aerial ace	helping hand	synthesis	double edge
 treecko	252	\N	grass	\N	leaf storm	sunny day	grass whistle	agility
-grovyle	253	\N	grass	\N	double edge	confide	screech	mega punch
-sceptile	254	\N	grass	\N	earthquake	endeavor	slam	mud slap
 torchic	255	\N	fire	\N	protect	scratch	will o wisp	strength
-combusken	256	\N	fighting	fire	fling	swagger	snore	focus blast
-blaziken	257	\N	fighting	fire	ember	mega punch	counter	hidden power
 mudkip	258	\N	water	\N	curse	strength	hidden power	frustration
-marshtomp	259	\N	ground	water	endeavor	growl	body slam	toxic
-swampert	260	\N	ground	water	bulldoze	substitute	mud bomb	hidden power
 poochyena	261	\N	dark	\N	tackle	frustration	headbutt	endure
-mightyena	262	\N	dark	\N	psych up	return	sand attack	take down
 zigzagoon	263	\N	normal	\N	confide	sand attack	tickle	return
-linoone	264	\N	normal	\N	attract	odor sleuth	round	natural gift
 wurmple	265	\N	bug	\N	electroweb	poison sting	tackle	snore
-silcoon	266	\N	bug	\N	electroweb	string shot	iron defense	bug bite
-beautifly	267	\N	flying	bug	stun spore	ominous wind	defog	hidden power
-cascoon	268	\N	bug	\N	string shot	iron defense	bug bite	harden
 dustox	269	\N	poison	bug	psybeam	u turn	string shot	hyper beam
 lotad	270	\N	grass	water	mist	captivate	double edge	giga drain
-lombre	271	\N	grass	water	flash	toxic	bullet seed	surf
-ludicolo	272	\N	grass	water	hidden power	grass knot	confide	surf
 seedot	273	\N	grass	\N	double team	round	nasty plot	harden
-nuzleaf	274	\N	dark	grass	return	worry seed	swift	false swipe
-shiftry	275	\N	dark	grass	swift	brick break	headbutt	twister
 taillow	276	\N	flying	normal	hidden power	rain dance	swagger	thief
-swellow	277	\N	flying	normal	attract	endeavor	tailwind	swagger
 wingull	278	\N	flying	water	uproar	captivate	hail	substitute
-pelipper	279	\N	flying	water	double edge	giga impact	protect	mist
 ralts	280	\N	fairy	psychic	safeguard	icy wind	body slam	double edge
-kirlia	281	\N	fairy	psychic	shock wave	heal pulse	calm mind	disarming voice
-gardevoir	282	\N	fairy	psychic	charge beam	confusion	magic coat	focus blast
 surskit	283	\N	water	bug	protect	shadow ball	fell stinger	quick attack
-masquerain	284	\N	flying	bug	endure	sweet scent	double edge	energy ball
 shroomish	285	\N	grass	\N	round	headbutt	false swipe	snore
-breloom	286	\N	fighting	grass	rest	low sweep	cut	mega drain
 slakoth	287	\N	normal	\N	brick break	covet	swagger	night slash
-vigoroth	288	\N	normal	\N	power up punch	dynamic punch	mimic	snore
-slaking	289	\N	normal	\N	hone claws	double team	brick break	dynamic punch
 nincada	290	\N	ground	bug	mind reader	string shot	bug bite	bide
-ninjask	291	\N	flying	bug	endure	solar beam	rest	hone claws
-shedinja	292	\N	ghost	bug	substitute	rest	solar beam	hone claws
 whismur	293	\N	normal	\N	echoed voice	secret power	fire punch	icy wind
-loudred	294	\N	normal	\N	mud slap	double team	body slam	headbutt
-exploud	295	\N	normal	\N	solar beam	rest	thunder punch	hyper beam
 makuhita	296	\N	fighting	\N	bulk up	vacuum wave	attract	fling
-hariyama	297	\N	fighting	\N	seismic toss	heavy slam	return	hyper beam
+slaking	289	288	normal	\N	hone claws	double team	brick break	dynamic punch
+pelipper	279	278	flying	water	double edge	giga impact	protect	mist
+shedinja	292	290	ghost	bug	substitute	rest	solar beam	hone claws
+gardevoir	282	281	fairy	psychic	charge beam	confusion	magic coat	focus blast
 azurill	298	\N	fairy	normal	hail	tickle	rest	endure
 nosepass	299	\N	rock	\N	thunder	rock slide	ice punch	protect
 skitty	300	\N	normal	\N	substitute	protect	thunder	charge beam
-delcatty	301	\N	normal	\N	grass knot	dream eater	shadow ball	safeguard
 sableye	302	\N	ghost	dark	cut	mega kick	aerial ace	recover
 mawile	303	\N	fairy	steel	punishment	secret power	astonish	feint attack
 aron	304	\N	rock	steel	iron head	snore	stealth rock	metal burst
-lairon	305	\N	rock	steel	bulldoze	iron tail	mimic	iron head
-aggron	306	\N	rock	steel	fire punch	mega kick	rock polish	aerial ace
 meditite	307	\N	psychic	fighting	sleep talk	work up	helping hand	grass knot
-medicham	308	\N	psychic	fighting	return	detect	shadow ball	feint
 electrike	309	\N	electric	\N	swift	confide	sleep talk	leer
-manectric	310	\N	electric	\N	snore	discharge	tackle	thunder
 plusle	311	\N	electric	\N	charm	spark	frustration	charge
 minun	312	\N	electric	\N	rollout	sing	mega kick	trump card
 volbeat	313	\N	bug	\N	mud slap	thunder wave	rest	shadow ball
 illumise	314	\N	bug	\N	encore	play rough	helping hand	ominous wind
-roselia	315	\N	poison	grass	attract	rest	worry seed	psych up
 gulpin	316	\N	poison	\N	defense curl	sludge bomb	acid spray	bullet seed
-swalot	317	\N	poison	\N	snore	yawn	ice punch	bullet seed
 carvanha	318	\N	dark	water	leer	double team	assurance	waterfall
-sharpedo	319	\N	dark	water	snore	rock tomb	ancient power	mimic
 wailmer	320	\N	water	\N	amnesia	rollout	substitute	astonish
-wailord	321	\N	water	\N	double team	strength	astonish	scald
 numel	322	\N	ground	fire	headbutt	sandstorm	frustration	defense curl
-camerupt	323	\N	ground	fire	round	mimic	hyper beam	amnesia
 torkoal	324	\N	fire	\N	incinerate	explosion	endure	flame burst
 spoink	325	\N	psychic	\N	odor sleuth	psych up	thief	body slam
-grumpig	326	\N	psychic	\N	splash	drain punch	return	focus blast
 spinda	327	\N	normal	\N	substitute	shock wave	body slam	psychic
 trapinch	328	\N	ground	\N	endure	gust	sand attack	substitute
-vibrava	329	\N	dragon	ground	twister	air cutter	double edge	protect
-flygon	330	\N	dragon	ground	dragon claw	flamethrower	draco meteor	return
 cacnea	331	\N	grass	\N	confide	round	destiny bond	leech seed
-cacturne	332	\N	dark	grass	snore	headbutt	retaliate	body slam
 swablu	333	\N	flying	normal	heat wave	roost	double edge	aerial ace
-altaria	334	\N	flying	dragon	iron tail	pluck	dream eater	cotton guard
 zangoose	335	\N	normal	\N	captivate	brick break	frustration	confide
 seviper	336	\N	poison	\N	stockpile	natural gift	iron tail	sludge bomb
 lunatone	337	\N	psychic	rock	reflect	frustration	explosion	rest
 solrock	338	\N	psychic	rock	facade	rock slide	calm mind	stealth rock
 barboach	339	\N	ground	water	mud sport	fissure	captivate	bounce
-whiscash	340	\N	ground	water	swagger	frustration	rock smash	earthquake
 corphish	341	\N	water	\N	whirlpool	endure	hidden power	dragon dance
-crawdaunt	342	\N	dark	water	sludge wave	dark pulse	rain dance	harden
 baltoy	343	\N	psychic	ground	gyro ball	secret power	solar beam	gravity
-claydol	344	\N	psychic	ground	double edge	ice beam	protect	harden
 lileep	345	\N	grass	rock	bind	wring out	flash	swallow
-cradily	346	\N	grass	rock	substitute	double team	bullet seed	rock smash
 anorith	347	\N	bug	rock	hone claws	rapid spin	rock tomb	cross poison
-armaldo	348	\N	bug	rock	return	rock blast	low kick	crush claw
 feebas	349	\N	water	\N	snore	ice beam	confuse ray	double edge
-milotic	350	\N	water	\N	disarming voice	giga impact	hydro pump	hyper beam
 castform	351	\N	normal	\N	hurricane	blizzard	captivate	retaliate
 kecleon	352	\N	normal	\N	psych up	fury swipes	rock smash	secret power
 shuppet	353	\N	ghost	\N	pain split	thunder	telekinesis	taunt
-banette	354	\N	ghost	\N	curse	pain split	dazzling gleam	return
 duskull	355	\N	ghost	\N	shadow ball	endure	dream eater	substitute
-dusclops	356	\N	ghost	\N	sunny day	ice beam	flash	ice punch
 tropius	357	\N	flying	grass	aerial ace	facade	secret power	flash
-chimecho	358	\N	psychic	\N	growl	hypnosis	round	natural gift
 absol	359	\N	dark	\N	frustration	future sight	pursuit	baton pass
 ditto	132	\N	normal	\N	transform	\N	\N	\N
 unown	201	\N	psychic	\N	hidden power	\N	\N	\N
 smeargle	235	\N	normal	\N	sketch	\N	\N	\N
 wynaut	360	\N	psychic	\N	mirror coat	destiny bond	encore	counter
 snorunt	361	\N	ice	\N	frustration	rollout	sleep talk	light screen
-glalie	362	\N	ice	\N	double team	giga impact	bite	rain dance
 spheal	363	\N	water	ice	headbutt	icy wind	belly drum	toxic
-sealeo	364	\N	water	ice	double edge	rain dance	facade	substitute
-walrein	365	\N	water	ice	hail	ice fang	water gun	roar
 clamperl	366	\N	water	\N	swagger	iron defense	double team	dive
-huntail	367	\N	water	\N	screech	body slam	natural gift	waterfall
-gorebyss	368	\N	water	\N	confusion	double edge	swagger	icy wind
 relicanth	369	\N	rock	water	natural gift	snore	hydro pump	brine
 luvdisc	370	\N	water	\N	rest	brine	blizzard	psych up
 bagon	371	\N	dragon	\N	rain dance	hidden power	toxic	facade
-shelgon	372	\N	dragon	\N	protect	aerial ace	sunny day	fire blast
-salamence	373	\N	flying	dragon	rock tomb	protect	shadow claw	attract
 beldum	374	\N	psychic	steel	iron head	iron defense	take down	zen headbutt
-metang	375	\N	psychic	steel	snore	metal claw	take down	flash cannon
-metagross	376	\N	psychic	steel	frustration	fury cutter	sludge bomb	hidden power
 regirock	377	\N	rock	\N	zap cannon	safeguard	thunder	seismic toss
 regice	378	\N	ice	\N	block	counter	thunderbolt	safeguard
 registeel	379	\N	steel	\N	ancient power	thunder wave	natural gift	toxic
@@ -1178,97 +1128,58 @@ rayquaza	384	\N	flying	dragon	waterfall	confide	scary face	swords dance
 jirachi	385	\N	psychic	steel	cosmic power	reflect	fire punch	sunny day
 deoxys normal	386	\N	psychic	\N	toxic	trick room	recover	taunt
 turtwig	387	\N	grass	\N	mega drain	bullet seed	mud slap	stealth rock
-grotle	388	\N	grass	\N	endure	toxic	sunny day	tackle
-torterra	389	\N	ground	grass	razor leaf	rock tomb	leaf storm	protect
 chimchar	390	\N	fire	\N	swords dance	submission	will o wisp	focus punch
-monferno	391	\N	fighting	fire	rock smash	fling	slack off	scratch
-infernape	392	\N	fighting	fire	protect	secret power	headbutt	toxic
 piplup	393	\N	water	\N	pluck	natural gift	substitute	signal beam
-prinplup	394	\N	water	\N	hail	rock smash	brine	echoed voice
-empoleon	395	\N	steel	water	facade	roar	metal claw	rain dance
 starly	396	\N	flying	normal	tackle	snore	round	rest
-staravia	397	\N	flying	normal	brave bird	agility	retaliate	work up
-staraptor	398	\N	flying	normal	brave bird	toxic	snore	return
 bidoof	399	\N	normal	\N	super fang	round	tackle	thunderbolt
-bibarel	400	\N	water	normal	strength	shadow ball	mud slap	sleep talk
 kricketot	401	\N	bug	\N	bug bite	uproar	endeavor	growl
-kricketune	402	\N	bug	\N	sing	captivate	swords dance	endeavor
 shinx	403	\N	electric	\N	snore	leer	substitute	fire fang
-luxio	404	\N	electric	\N	bite	helping hand	captivate	charge
-luxray	405	\N	electric	\N	thunder fang	headbutt	round	flash
 budew	406	\N	poison	grass	rain dance	shadow ball	endure	absorb
-roserade	407	\N	poison	grass	giga drain	weather ball	magical leaf	covet
 cranidos	408	\N	rock	\N	head smash	thrash	rest	incinerate
-rampardos	409	\N	rock	\N	pain split	sandstorm	hyper beam	focus blast
 shieldon	410	\N	steel	rock	blizzard	flamethrower	return	roar
-bastiodon	411	\N	steel	rock	fire blast	taunt	torment	metal sound
 burmy	412	\N	bug	\N	snore	tackle	bug bite	string shot
 wormadam plant	413	\N	grass	bug	razor leaf	thief	string shot	shadow ball
-mothim	414	\N	flying	bug	solar beam	gust	confide	energy ball
 combee	415	\N	flying	bug	bug buzz	string shot	tailwind	snore
-vespiquen	416	\N	flying	bug	rain dance	hone claws	venoshock	struggle bug
 pachirisu	417	\N	electric	\N	swift	return	spark	seed bomb
 buizel	418	\N	water	\N	brine	facade	ice punch	waterfall
-floatzel	419	\N	water	\N	sonic boom	rain dance	waterfall	secret power
 cherubi	420	\N	grass	\N	heal pulse	flower shield	safeguard	grass whistle
-cherrim	421	\N	grass	\N	energy ball	round	sunny day	bullet seed
 shellos	422	\N	water	\N	swallow	surf	attract	captivate
-gastrodon	423	\N	ground	water	protect	earth power	bulldoze	rest
-ambipom	424	\N	normal	\N	thunderbolt	double team	thief	payback
+infernape	392	391	fighting	fire	protect	secret power	headbutt	toxic
 drifloon	425	\N	flying	ghost	protect	hidden power	round	swagger
-drifblim	426	\N	flying	ghost	protect	cut	secret power	hidden power
 buneary	427	\N	normal	\N	dig	protect	hidden power	natural gift
-lopunny	428	\N	normal	\N	charge beam	uproar	protect	defense curl
-mismagius	429	\N	ghost	\N	aerial ace	natural gift	mystical fire	snatch
-honchkrow	430	\N	flying	dark	sucker punch	psychic	ominous wind	double team
+hippowdon	450	449	ground	\N	iron tail	endure	headbutt	tackle
+empoleon	395	394	steel	water	facade	roar	metal claw	rain dance
 glameow	431	\N	normal	\N	quick attack	round	swagger	substitute
-purugly	432	\N	normal	\N	slash	sunny day	body slam	last resort
 chingling	433	\N	psychic	\N	growl	stored power	thunder wave	astonish
 stunky	434	\N	dark	poison	venoshock	substitute	natural gift	sunny day
-skuntank	435	\N	dark	poison	confide	endure	roar	frustration
 bronzor	436	\N	psychic	steel	sandstorm	protect	snore	signal beam
-bronzong	437	\N	psychic	steel	hidden power	facade	shadow ball	grass knot
 bonsly	438	\N	rock	\N	headbutt	dig	defense curl	endure
 mime jr	439	\N	fairy	psychic	headbutt	barrier	brick break	healing wish
 happiny	440	\N	normal	\N	zen headbutt	echoed voice	gravity	headbutt
 chatot	441	\N	flying	normal	encore	mirror move	feather dance	return
 spiritomb	442	\N	dark	ghost	sucker punch	grudge	shadow ball	protect
 gible	443	\N	ground	dragon	dragon rage	metal claw	facade	stealth rock
-gabite	444	\N	ground	dragon	dragon rage	dig	toxic	twister
-garchomp	445	\N	ground	dragon	fury cutter	dig	fire fang	rest
 munchlax	446	\N	normal	\N	double edge	snore	blizzard	thunderbolt
 riolu	447	\N	fighting	\N	zen headbutt	retaliate	focus punch	bullet punch
-lucario	448	\N	steel	fighting	brick break	low kick	me first	rest
 hippopotas	449	\N	ground	\N	whirlwind	swagger	revenge	bite
-hippowdon	450	\N	ground	\N	iron tail	endure	headbutt	tackle
 skorupi	451	\N	bug	poison	taunt	protect	sleep talk	poison sting
-drapion	452	\N	dark	poison	torment	swagger	sleep talk	fling
 croagunk	453	\N	fighting	poison	poison jab	earthquake	rock smash	protect
-toxicroak	454	\N	fighting	poison	thunder punch	fury cutter	dig	rock slide
 carnivine	455	\N	grass	\N	secret power	swagger	leech seed	growth
+metagross	376	375	psychic	steel	frustration	fury cutter	sludge bomb	hidden power
+roserade	407	315	poison	grass	giga drain	weather ball	magical leaf	covet
 finneon	456	\N	water	\N	safeguard	air cutter	ice beam	secret power
-lumineon	457	\N	water	\N	giga impact	ominous wind	facade	double team
 mantyke	458	\N	flying	water	double team	ice beam	rain dance	wide guard
 snover	459	\N	ice	grass	confide	safeguard	synthesis	facade
-abomasnow	460	\N	ice	grass	icy wind	light screen	ice punch	mist
-weavile	461	\N	ice	dark	aerial ace	dig	retaliate	ice punch
-magnezone	462	\N	steel	electric	magnetic flux	round	zap cannon	wild charge
-lickilicky	463	\N	normal	\N	toxic	incinerate	bind	double team
-rhyperior	464	\N	rock	ground	sleep talk	flash cannon	fire punch	whirlpool
-tangrowth	465	\N	grass	\N	attract	stun spore	ancient power	bind
-electivire	466	\N	electric	\N	covet	frustration	volt switch	double team
-magmortar	467	\N	fire	\N	feint attack	iron tail	captivate	torment
-togekiss	468	\N	flying	fairy	psyshock	incinerate	psych up	after you
-yanmega	469	\N	flying	bug	quick attack	hidden power	string shot	u turn
-leafeon	470	\N	grass	\N	return	endure	fury cutter	bullet seed
-glaceon	471	\N	ice	\N	avalanche	ice beam	hidden power	endure
-gliscor	472	\N	flying	ground	quick attack	facade	screech	hidden power
-mamoswine	473	\N	ground	ice	bulldoze	rain dance	mist	dig
-porygon z	474	\N	normal	\N	charge beam	snore	hyper beam	signal beam
-gallade	475	\N	fighting	psychic	swords dance	signal beam	focus blast	dazzling gleam
-probopass	476	\N	steel	rock	ancient power	mud slap	protect	magnet rise
-dusknoir	477	\N	ghost	\N	payback	ice beam	return	infestation
-froslass	478	\N	ghost	ice	giga impact	taunt	dream eater	rain dance
+servine	496	495	grass	\N	slam	bind	cut	hidden power
+herdier	507	506	normal	\N	thunderbolt	return	uproar	hidden power
+palpitoad	536	535	ground	water	snore	rain dance	bounce	sludge wave
+simisage	512	511	grass	\N	facade	focus punch	shadow claw	seed bomb
+zebstrika	523	522	electric	\N	thunder	snore	toxic	thunder wave
+musharna	518	517	psychic	\N	rest	trick	zen headbutt	thunder wave
+swoobat	528	527	flying	psychic	tailwind	hidden power	thief	air slash
+simisear	514	513	fire	\N	uproar	snore	work up	rock smash
+conkeldurr	534	533	fighting	\N	drain punch	attract	block	rock slide
+dewott	502	501	water	\N	attract	taunt	double team	retaliate
 rotom	479	\N	ghost	electric	dream eater	dark pulse	protect	thunder
 uxie	480	\N	psychic	\N	extrasensory	rest	future sight	fling
 mesprit	481	\N	psychic	\N	telekinesis	psych up	copycat	ice punch
@@ -1286,148 +1197,96 @@ shaymin land	492	\N	grass	\N	sweet scent	magical leaf	double team	confide
 arceus	493	\N	normal	\N	fire blast	flamethrower	telekinesis	ice beam
 victini	494	\N	fire	psychic	thunder punch	sunny day	snore	substitute
 snivy	495	\N	grass	\N	light screen	return	rest	solar beam
-servine	496	\N	grass	\N	slam	bind	cut	hidden power
-serperior	497	\N	grass	\N	dragon tail	energy ball	wrap	secret power
 tepig	498	\N	fire	\N	secret power	superpower	taunt	swagger
-pignite	499	\N	fighting	fire	endeavor	covet	odor sleuth	snore
-emboar	500	\N	fighting	fire	rock smash	confide	strength	poison jab
 oshawott	501	\N	water	\N	tail whip	aqua jet	helping hand	x scissor
-dewott	502	\N	water	\N	attract	taunt	double team	retaliate
-samurott	503	\N	water	\N	retaliate	iron tail	grass knot	hidden power
 patrat	504	\N	normal	\N	covet	foresight	frustration	rain dance
-watchog	505	\N	normal	\N	double team	after you	round	cut
 lillipup	506	\N	normal	\N	hidden power	reversal	ice fang	endure
-herdier	507	\N	normal	\N	thunderbolt	return	uproar	hidden power
-stoutland	508	\N	normal	\N	rain dance	after you	covet	frustration
 purrloin	509	\N	dark	\N	echoed voice	double team	gunk shot	return
-liepard	510	\N	dark	\N	play rough	substitute	rock smash	assist
 pansage	511	\N	grass	\N	astonish	bite	vine whip	leer
-simisage	512	\N	grass	\N	facade	focus punch	shadow claw	seed bomb
 pansear	513	\N	fire	\N	incinerate	flame charge	bite	play nice
-simisear	514	\N	fire	\N	uproar	snore	work up	rock smash
 panpour	515	\N	water	\N	covet	swagger	disarming voice	snore
-simipour	516	\N	water	\N	hail	grass knot	ice beam	dig
 munna	517	\N	psychic	\N	calm mind	reflect	heal bell	charge beam
-musharna	518	\N	psychic	\N	rest	trick	zen headbutt	thunder wave
 pidove	519	\N	flying	normal	sky attack	aerial ace	pluck	rain dance
-tranquill	520	\N	flying	normal	razor wind	quick attack	double team	work up
-unfezant	521	\N	flying	normal	substitute	fly	sunny day	round
 blitzle	522	\N	electric	\N	quick attack	flash	toxic	bounce
-zebstrika	523	\N	electric	\N	thunder	snore	toxic	thunder wave
 roggenrola	524	\N	rock	\N	curse	hidden power	snore	swagger
-boldore	525	\N	rock	\N	power gem	block	substitute	return
-gigalith	526	\N	rock	\N	rock polish	rock tomb	tackle	rock slide
 woobat	527	\N	flying	psychic	odor sleuth	facade	steel wing	round
-swoobat	528	\N	flying	psychic	tailwind	hidden power	thief	air slash
 drilbur	529	\N	ground	\N	bulldoze	brick break	rock slide	cut
-excadrill	530	\N	steel	ground	drill run	swords dance	sludge bomb	fury swipes
 audino	531	\N	normal	\N	dream eater	thunder	iron tail	snatch
 timburr	532	\N	fighting	\N	work up	low sweep	confide	sleep talk
-gurdurr	533	\N	fighting	\N	block	facade	frustration	rock slide
-conkeldurr	534	\N	fighting	\N	drain punch	attract	block	rock slide
 tympole	535	\N	water	\N	water pulse	surf	flail	return
-palpitoad	536	\N	ground	water	snore	rain dance	bounce	sludge wave
-seismitoad	537	\N	ground	water	focus punch	bounce	giga impact	hail
+gallade	475	281	fighting	psychic	swords dance	signal beam	focus blast	dazzling gleam
+weavile	461	215	ice	dark	aerial ace	dig	retaliate	ice punch
+froslass	478	361	ghost	ice	giga impact	taunt	dream eater	rain dance
+gliscor	472	207	flying	ground	quick attack	facade	screech	hidden power
+mamoswine	473	221	ground	ice	bulldoze	rain dance	mist	dig
+dusknoir	477	356	ghost	\N	payback	ice beam	return	infestation
+probopass	476	299	steel	rock	ancient power	mud slap	protect	magnet rise
 throh	538	\N	fighting	\N	work up	vital throw	brick break	focus punch
 sawk	539	\N	fighting	\N	fling	rest	block	double team
 sewaddle	540	\N	grass	bug	swagger	bug bite	agility	secret power
-swadloon	541	\N	grass	bug	string shot	dream eater	synthesis	giga drain
-leavanny	542	\N	grass	bug	heal bell	hyper beam	rest	synthesis
 venipede	543	\N	poison	bug	gyro ball	screech	pin missile	venoshock
-whirlipede	544	\N	poison	bug	snore	attract	return	poison sting
-scolipede	545	\N	poison	bug	baton pass	iron tail	frustration	aqua tail
 cottonee	546	\N	fairy	grass	cotton spore	energy ball	return	memento
-whimsicott	547	\N	fairy	grass	grass knot	confide	sunny day	covet
 petilil	548	\N	grass	\N	snore	grass knot	flash	leech seed
-lilligant	549	\N	grass	\N	synthesis	sleep talk	dream eater	teeter dance
 basculin red striped	550	\N	water	\N	scald	tail whip	endeavor	double edge
 sandile	551	\N	dark	ground	retaliate	mean look	earthquake	crunch
-krokorok	552	\N	dark	ground	strength	sand tomb	double team	retaliate
-krookodile	553	\N	dark	ground	return	rage	bulldoze	bulk up
 darumaka	554	\N	fire	\N	solar beam	snatch	encore	tackle
 darmanitan standard	555	\N	fire	\N	snatch	rock smash	will o wisp	earthquake
 maractus	556	\N	grass	\N	facade	petal dance	seed bomb	cotton guard
 dwebble	557	\N	rock	bug	strength	stealth rock	rock tomb	hidden power
-crustle	558	\N	rock	bug	confide	smack down	sleep talk	shadow claw
 scraggy	559	\N	fighting	dark	counter	leer	detect	iron tail
-scrafty	560	\N	fighting	dark	spite	sand attack	stone edge	dig
 sigilyph	561	\N	flying	psychic	icy wind	magic coat	zen headbutt	gust
 yamask	562	\N	ghost	\N	fake tears	psychic	skill swap	hidden power
-cofagrigus	563	\N	ghost	\N	astonish	swagger	toxic	hex
 tirtouga	564	\N	rock	water	facade	knock off	aqua tail	bide
-carracosta	565	\N	rock	water	rock slide	zen headbutt	ancient power	giga impact
 archen	566	\N	flying	rock	crunch	snore	thrash	smack down
-archeops	567	\N	flying	rock	outrage	steel wing	substitute	dig
 trubbish	568	\N	poison	\N	rain dance	mud sport	sand attack	stockpile
-garbodor	569	\N	poison	\N	double team	acid spray	body slam	clear smog
 zorua	570	\N	dark	\N	retaliate	grass knot	sleep talk	agility
-zoroark	571	\N	dark	\N	hidden power	focus blast	bounce	roar
 minccino	572	\N	normal	\N	uproar	flail	thief	safeguard
-cinccino	573	\N	normal	\N	aqua tail	work up	retaliate	fling
 gothita	574	\N	psychic	\N	secret power	mirror coat	role play	round
-gothorita	575	\N	psychic	\N	fling	dream eater	safeguard	calm mind
-gothitelle	576	\N	psychic	\N	psybeam	protect	payback	rain dance
 solosis	577	\N	psychic	\N	telekinesis	recover	pain split	snore
-duosion	578	\N	psychic	\N	reflect	confide	double team	snatch
-reuniclus	579	\N	psychic	\N	gravity	trick room	superpower	confide
 ducklett	580	\N	flying	water	defog	round	secret power	water sport
-swanna	581	\N	flying	water	confide	dive	protect	ice beam
 vanillite	582	\N	ice	\N	imprison	toxic	harden	frost breath
-vanillish	583	\N	ice	\N	rain dance	secret power	substitute	signal beam
-vanilluxe	584	\N	ice	\N	water pulse	ice beam	freeze dry	avalanche
 deerling	585	\N	grass	normal	aromatherapy	echoed voice	facade	solar beam
-sawsbuck	586	\N	grass	normal	swagger	horn leech	leech seed	bounce
 emolga	587	\N	flying	electric	spark	rain dance	substitute	tailwind
 karrablast	588	\N	bug	\N	rest	fury attack	drill run	iron defense
-escavalier	589	\N	steel	bug	bug buzz	giga impact	facade	secret power
 foongus	590	\N	poison	grass	giga drain	clear smog	double team	gastro acid
-amoonguss	591	\N	poison	grass	giga drain	solar beam	foul play	synthesis
 frillish	592	\N	ghost	water	ice beam	attract	shock wave	psych up
-jellicent	593	\N	ghost	water	rain dance	secret power	spite	energy ball
 alomomola	594	\N	water	\N	aqua jet	rain dance	rest	wide guard
 joltik	595	\N	electric	bug	double team	feint attack	confide	bounce
-galvantula	596	\N	electric	bug	signal beam	shock wave	bug bite	sucker punch
 ferroseed	597	\N	steel	grass	seed bomb	hidden power	thunder wave	payback
-ferrothorn	598	\N	steel	grass	giga drain	worry seed	sleep talk	double team
 klink	599	\N	steel	\N	protect	lock on	signal beam	zap cannon
-klang	600	\N	steel	\N	iron defense	double team	rock polish	lock on
-klinklang	601	\N	steel	\N	toxic	magnet rise	sleep talk	metal sound
 tynamo	602	\N	electric	\N	tackle	spark	thunder wave	magnet rise
-eelektrik	603	\N	electric	\N	thunderbolt	zap cannon	acid	bounce
-eelektross	604	\N	electric	\N	ion deluge	light screen	secret power	protect
 elgyem	605	\N	psychic	\N	safeguard	disable	rain dance	recover
-beheeyem	606	\N	psychic	\N	rock slide	after you	miracle eye	ally switch
 litwick	607	\N	fire	ghost	trick	snore	flame burst	toxic
-lampent	608	\N	fire	ghost	frustration	sunny day	astonish	imprison
-chandelure	609	\N	fire	ghost	thief	solar beam	toxic	taunt
 axew	610	\N	dragon	\N	dual chop	counter	outrage	poison jab
-fraxure	611	\N	dragon	\N	giga impact	dragon rage	cut	snore
-haxorus	612	\N	dragon	\N	outrage	dragon dance	shock wave	endeavor
 cubchoo	613	\N	ice	\N	power up punch	confide	focus punch	play rough
-beartic	614	\N	ice	\N	attract	toxic	strength	protect
 cryogonal	615	\N	ice	\N	acrobatics	frustration	poison jab	rain dance
 shelmet	616	\N	bug	\N	return	sludge bomb	snore	round
-accelgor	617	\N	bug	\N	secret power	substitute	swagger	round
+eelektrik	603	602	electric	\N	thunderbolt	zap cannon	acid	bounce
+chandelure	609	608	fire	ghost	thief	solar beam	toxic	taunt
+fraxure	611	610	dragon	\N	giga impact	dragon rage	cut	snore
+haxorus	612	611	dragon	\N	outrage	dragon dance	shock wave	endeavor
+klinklang	601	600	steel	\N	toxic	magnet rise	sleep talk	metal sound
+lampent	608	607	fire	ghost	frustration	sunny day	astonish	imprison
+klang	600	599	steel	\N	iron defense	double team	rock polish	lock on
+galvantula	596	595	electric	bug	signal beam	shock wave	bug bite	sucker punch
+ferrothorn	598	597	steel	grass	giga drain	worry seed	sleep talk	double team
+beartic	614	613	ice	\N	attract	toxic	strength	protect
+jellicent	593	592	ghost	water	rain dance	secret power	spite	energy ball
+eelektross	604	603	electric	\N	ion deluge	light screen	secret power	protect
+amoonguss	591	590	poison	grass	giga drain	solar beam	foul play	synthesis
+beheeyem	606	605	psychic	\N	rock slide	after you	miracle eye	ally switch
 stunfisk	618	\N	electric	ground	endeavor	confide	flail	secret power
 mienfoo	619	\N	fighting	\N	frustration	reversal	rock smash	drain punch
-mienshao	620	\N	fighting	\N	double slap	u turn	aura sphere	confide
 druddigon	621	\N	dragon	\N	dragon rage	dark pulse	slash	giga impact
 golett	622	\N	ghost	ground	icy wind	frustration	ice punch	defense curl
-golurk	623	\N	ghost	ground	phantom force	rest	heavy slam	facade
 pawniard	624	\N	steel	dark	scary face	revenge	shadow claw	sleep talk
-bisharp	625	\N	steel	dark	rock smash	retaliate	brick break	swagger
 bouffalant	626	\N	normal	\N	retaliate	mud shot	bulldoze	surf
 rufflet	627	\N	flying	normal	shadow claw	heat wave	fly	secret power
-braviary	628	\N	flying	normal	hidden power	facade	peck	hone claws
 vullaby	629	\N	flying	dark	snarl	taunt	retaliate	return
-mandibuzz	630	\N	flying	dark	bone rush	embargo	psych up	roost
 heatmor	631	\N	fire	\N	incinerate	fury swipes	rock tomb	stockpile
 durant	632	\N	steel	bug	sand attack	retaliate	snore	x scissor
 deino	633	\N	dragon	dark	zen headbutt	thunder fang	secret power	scary face
-zweilous	634	\N	dragon	dark	draco meteor	spite	protect	psych up
-hydreigon	635	\N	dragon	dark	psych up	torment	hyper voice	dragon pulse
 larvesta	636	\N	fire	bug	incinerate	double team	hidden power	protect
-volcarona	637	\N	fire	bug	psychic	silver wind	flame charge	ember
 cobalion	638	\N	fighting	steel	focus blast	reflect	leer	swagger
 terrakion	639	\N	fighting	rock	aerial ace	stone edge	return	quick attack
 virizion	640	\N	fighting	grass	aerial ace	seed bomb	sacred sword	giga drain
@@ -1441,77 +1300,218 @@ keldeo ordinary	647	\N	fighting	water	stone edge	hydro pump	snore	facade
 meloetta aria	648	\N	psychic	normal	shadow claw	energy ball	hidden power	close combat
 genesect	649	\N	steel	bug	explosion	energy ball	double team	flash
 chespin	650	\N	grass	\N	brick break	zen headbutt	rollout	swagger
-quilladin	651	\N	grass	\N	aerial ace	seed bomb	fling	brick break
-chesnaught	652	\N	fighting	grass	nature power	low sweep	rock smash	poison jab
 fennekin	653	\N	fire	\N	solar beam	wish	lucky chant	psych up
-braixen	654	\N	fire	\N	magic coat	thief	safeguard	incinerate
-delphox	655	\N	psychic	fire	skill swap	cut	sunny day	low kick
 froakie	656	\N	water	\N	mind reader	secret power	thief	surf
-frogadier	657	\N	water	\N	icy wind	blizzard	frustration	rock slide
-greninja	658	\N	dark	water	haze	return	water shuriken	shadow sneak
 bunnelby	659	\N	normal	\N	dig	wild charge	cut	attract
-diggersby	660	\N	ground	normal	uproar	snore	double kick	recycle
 fletchling	661	\N	flying	normal	acrobatics	natural gift	flame charge	attract
-fletchinder	662	\N	flying	fire	growl	rest	me first	substitute
-talonflame	663	\N	flying	fire	tailwind	fly	hidden power	growl
 scatterbug	664	\N	bug	\N	stun spore	string shot	poison powder	tackle
-spewpa	665	\N	bug	\N	electroweb	bug bite	protect	harden
-vivillon	666	\N	flying	bug	psych up	toxic	hyper beam	substitute
 litleo	667	\N	normal	fire	return	leer	incinerate	sunny day
-pyroar	668	\N	normal	fire	fire blast	leer	swagger	flame charge
 flabebe	669	\N	fairy	\N	razor leaf	giga drain	rain dance	copycat
-floette	670	\N	fairy	\N	nature power	misty terrain	wish	synthesis
-florges	671	\N	fairy	\N	round	grassy terrain	wish	swagger
 skiddo	672	\N	grass	\N	rollout	nature power	take down	snore
-gogoat	673	\N	grass	\N	roar	giga impact	growth	sleep talk
 pancham	674	\N	fighting	\N	brick break	rock tomb	echoed voice	zen headbutt
-pangoro	675	\N	dark	fighting	facade	drain punch	dragon claw	aerial ace
 furfrou	676	\N	normal	\N	round	headbutt	hidden power	u turn
 espurr	677	\N	psychic	\N	protect	payback	sleep talk	energy ball
 meowstic male	678	\N	psychic	\N	cut	role play	calm mind	hyper beam
 honedge	679	\N	ghost	steel	iron defense	shadow claw	flash cannon	sleep talk
-doublade	680	\N	ghost	steel	rain dance	secret power	shadow claw	false swipe
 aegislash shield	681	\N	ghost	steel	night slash	cut	hyper beam	aerial ace
 spritzee	682	\N	fairy	\N	rest	thunderbolt	draining kiss	secret power
-aromatisse	683	\N	fairy	\N	gyro ball	sunny day	skill swap	flash
 swirlix	684	\N	fairy	\N	tackle	covet	secret power	snore
-slurpuff	685	\N	fairy	\N	secret power	giga impact	magic coat	thief
 inkay	686	\N	psychic	dark	aerial ace	hypnosis	sleep talk	thunderbolt
-malamar	687	\N	psychic	dark	hyper beam	facade	calm mind	taunt
 binacle	688	\N	water	rock	ancient power	double team	helping hand	nature power
-barbaracle	689	\N	water	rock	water gun	sludge wave	x scissor	mud slap
 skrelp	690	\N	water	poison	double team	acid armor	waterfall	haze
-dragalge	691	\N	dragon	poison	confide	water gun	waterfall	poison tail
 clauncher	692	\N	water	\N	endure	waterfall	dive	swords dance
-clawitzer	693	\N	water	\N	splash	sludge wave	ice beam	icy wind
 helioptile	694	\N	normal	electric	rest	dark pulse	surf	attract
-heliolisk	695	\N	normal	electric	low kick	hyper voice	hidden power	rock tomb
+spewpa	665	664	bug	\N	electroweb	bug bite	protect	harden
 tyrunt	696	\N	dragon	rock	zen headbutt	aerial ace	block	stomp
-tyrantrum	697	\N	dragon	rock	sunny day	hone claws	frustration	sleep talk
 amaura	698	\N	ice	rock	substitute	earth power	safeguard	ancient power
-aurorus	699	\N	ice	rock	ice beam	hidden power	toxic	psychic
-sylveon	700	\N	fairy	\N	disarming voice	echoed voice	magic coat	substitute
+goodra	706	705	dragon	\N	feint	thunder punch	attract	sleep talk
 hawlucha	701	\N	flying	fighting	grass knot	ally switch	sleep talk	me first
 dedenne	702	\N	fairy	electric	secret power	facade	charge	snore
 carbink	703	\N	fairy	rock	sunny day	reflect	smack down	return
 goomy	704	\N	dragon	\N	body slam	substitute	tackle	snore
-sliggoo	705	\N	dragon	\N	sleep talk	absorb	tackle	bide
-goodra	706	\N	dragon	\N	feint	thunder punch	attract	sleep talk
 klefki	707	\N	fairy	steel	facade	secret power	sunny day	magic room
 phantump	708	\N	grass	ghost	tackle	dig	astonish	toxic
-trevenant	709	\N	grass	ghost	cut	facade	frustration	round
 pumpkaboo average	710	\N	grass	ghost	synthesis	seed bomb	nature power	astonish
 gourgeist average	711	\N	grass	ghost	psychic	confuse ray	bullet seed	hyper beam
 bergmite	712	\N	ice	\N	rock tomb	rain dance	recover	strength
-avalugg	713	\N	ice	\N	tackle	rock polish	rapid spin	toxic
 noibat	714	\N	dragon	flying	confide	round	shadow claw	taunt
-noivern	715	\N	dragon	flying	sleep talk	fly	rest	uproar
 xerneas	716	\N	fairy	\N	toxic	protect	calm mind	hyper beam
 yveltal	717	\N	flying	dark	substitute	focus blast	taunt	confide
 zygarde	718	\N	ground	dragon	glare	rock slide	block	grass knot
 diancie	719	\N	fairy	rock	rest	calm mind	psych up	reflect
 hoopa	720	\N	ghost	psychic	rain dance	torment	psychic	phantom force
 volcanion	721	\N	water	fire	brick break	fire blast	frustration	protect
+chansey	113	440	normal	\N	return	bubble beam	safeguard	curse
+electivire	466	125	electric	\N	covet	frustration	volt switch	double team
+golduck	55	54	water	\N	water gun	low kick	wonder room	headbutt
+umbreon	197	133	dark	\N	round	snatch	natural gift	moonlight
+mr mime	122	439	fairy	psychic	calm mind	nasty plot	icy wind	psywave
+arcanine	59	58	fire	\N	will o wisp	dragon breath	thunder fang	roar
+scizor	212	123	steel	bug	fury cutter	agility	false swipe	mimic
+yanmega	469	193	flying	bug	quick attack	hidden power	string shot	u turn
+weezing	110	109	poison	\N	confide	frustration	protect	toxic
+cloyster	91	90	ice	water	round	hyper beam	water gun	rage
+dragonite	149	148	flying	dragon	sleep talk	dragon pulse	rain dance	ice punch
+kadabra	64	63	psychic	\N	attract	trick room	torment	confusion
+bayleef	153	152	grass	\N	reflect	iron tail	toxic	seed bomb
+hitmonlee	106	236	fighting	\N	mega punch	attract	retaliate	confide
+machamp	68	67	fighting	\N	submission	round	attract	endure
+haunter	93	92	poison	ghost	sunny day	dazzling gleam	destiny bond	ice punch
+jynx	124	238	psychic	ice	ice beam	heal bell	zen headbutt	lick
+togekiss	468	176	flying	fairy	psyshock	incinerate	psych up	after you
+poliwhirl	61	60	water	\N	whirlpool	blizzard	submission	return
+hitmonchan	107	236	fighting	\N	captivate	mimic	bulk up	brick break
+primeape	57	56	fighting	\N	earthquake	mimic	covet	skull bash
+skiploom	188	187	flying	grass	sweet scent	stun spore	swagger	toxic
+togetic	176	175	flying	fairy	brick break	bestow	heal bell	defense curl
+kingler	99	98	water	\N	brick break	endure	wide guard	attract
+espeon	196	133	psychic	\N	confusion	frustration	tackle	giga impact
+magneton	82	81	steel	electric	double team	return	lock on	frustration
+leafeon	470	133	grass	\N	return	endure	fury cutter	bullet seed
+glaceon	471	133	ice	\N	avalanche	ice beam	hidden power	endure
+omastar	139	138	water	rock	sandstorm	shell smash	stone edge	constrict
+persian	53	52	normal	\N	bubble beam	water pulse	attract	feint
+noctowl	164	163	flying	normal	thief	twister	sunny day	hyper beam
+meganium	154	153	grass	\N	solar beam	endure	growl	bullet seed
+electrode	101	100	electric	\N	flash	rage	explosion	snore
+magnezone	462	82	steel	electric	magnetic flux	round	zap cannon	wild charge
+rhyperior	464	112	rock	ground	sleep talk	flash cannon	fire punch	whirlpool
+golem	76	75	ground	rock	mud sport	mega kick	mud slap	metronome
+gyarados	130	129	flying	water	thunder wave	return	reflect	dark pulse
+vaporeon	134	133	water	\N	substitute	hyper beam	brine	muddy water
+muk	89	88	poison	\N	natural gift	thunder	thunderbolt	mud bomb
+marowak	105	104	ground	\N	attract	knock off	bone club	double edge
+porygon2	233	137	normal	\N	thief	defense curl	recover	tri attack
+magmortar	467	126	fire	\N	feint attack	iron tail	captivate	torment
+rhydon	112	111	rock	ground	captivate	chip away	rollout	hammer arm
+bellossom	182	44	grass	\N	petal blizzard	swagger	sludge bomb	solar beam
+victreebel	71	70	poison	grass	flash	bug bite	razor leaf	spit up
+furret	162	161	normal	\N	brick break	dynamic punch	toxic	trick
+steelix	208	95	ground	steel	self destruct	dark pulse	natural gift	stone edge
+gengar	94	93	poison	ghost	metronome	curse	torment	ominous wind
+quilava	156	155	fire	\N	mud slap	swift	rest	frustration
+typhlosion	157	156	fire	\N	earthquake	swift	inferno	roar
+ariados	168	167	poison	bug	infestation	return	psychic	hyper beam
+honchkrow	430	198	flying	dark	sucker punch	psychic	ominous wind	double team
+dodrio	85	84	flying	normal	curse	swift	swagger	fly
+seadra	117	116	water	\N	flash cannon	brine	captivate	sleep talk
+ampharos	181	180	electric	\N	magnet rise	hidden power	mega kick	double edge
+flaaffy	180	179	electric	\N	headbutt	cotton guard	toxic	return
+ledian	166	165	flying	bug	frustration	thunder punch	hidden power	safeguard
+hitmontop	237	236	fighting	\N	role play	endure	frustration	brick break
+kingdra	230	117	dragon	water	waterfall	double edge	flash cannon	smokescreen
+marill	183	298	fairy	water	whirlpool	camouflage	blizzard	scald
+jolteon	135	133	electric	\N	curse	thunder wave	double edge	volt switch
+ambipom	424	190	normal	\N	thunderbolt	double team	thief	payback
+snorlax	143	446	normal	\N	surf	heavy slam	metronome	secret power
+xatu	178	177	flying	psychic	silver wind	sunny day	fly	zen headbutt
+poliwrath	62	61	fighting	water	confide	detect	seismic toss	metronome
+electabuzz	125	239	electric	\N	metronome	volt switch	substitute	electro ball
+crobat	169	42	flying	poison	snore	poison fang	dark pulse	acrobatics
+croconaw	159	158	water	\N	ice beam	rest	snore	fury cutter
+graveler	75	74	ground	rock	earth power	bulldoze	smack down	rock tomb
+dragonair	148	147	dragon	\N	iron tail	thunder	return	safeguard
+hypno	97	96	psychic	\N	skill swap	reflect	zen headbutt	double team
+machoke	67	66	fighting	\N	poison jab	seismic toss	skull bash	double edge
+exeggutor	103	102	psychic	grass	gravity	hyper beam	psych up	endure
+politoed	186	61	water	\N	swagger	dive	bulldoze	payback
+sudowoodo	185	438	rock	\N	foul play	ice punch	mimic	sucker punch
+porygon z	474	233	normal	\N	charge beam	snore	hyper beam	signal beam
+kabutops	141	140	water	rock	submission	secret power	brick break	earth power
+slowbro	80	79	psychic	water	submission	protect	nightmare	telekinesis
+tentacruel	73	72	poison	water	swagger	acid spray	brine	take down
+alakazam	65	64	psychic	\N	ally switch	mega kick	reflect	drain punch
+sunflora	192	191	grass	\N	bullet seed	attract	swords dance	energy ball
+feraligatr	160	159	water	\N	hone claws	slash	hail	avalanche
+flareon	136	133	fire	\N	flame charge	double team	incinerate	bide
+butterfree	12	11	flying	bug	double team	safeguard	poison powder	hyper beam
+raichu	26	25	electric	\N	return	double edge	dig	mimic
+charizard	6	5	flying	fire	iron tail	snore	substitute	endure
+quagsire	195	194	ground	water	water pulse	earthquake	scald	muddy water
+slowking	199	79	psychic	water	incinerate	skill swap	avalanche	flash
+seaking	119	118	water	\N	hidden power	return	protect	supersonic
+dewgong	87	86	ice	water	icy wind	hyper beam	headbutt	double edge
+jumpluff	189	188	flying	grass	psych up	facade	bullet seed	reflect
+blissey	242	113	normal	\N	drain punch	facade	light screen	rain dance
+mismagius	429	200	ghost	\N	aerial ace	natural gift	mystical fire	snatch
+kakuna	14	13	poison	bug	electroweb	bug bite	iron defense	string shot
+starmie	121	120	psychic	water	psych up	twister	signal beam	substitute
+sylveon	700	133	fairy	\N	disarming voice	echoed voice	magic coat	substitute
+tangrowth	465	114	grass	\N	attract	stun spore	ancient power	bind
+lanturn	171	170	electric	water	flash	aqua tail	swallow	sleep talk
+magmar	126	240	fire	\N	sunny day	body slam	covet	psywave
+lickilicky	463	108	normal	\N	toxic	incinerate	bind	double team
+weepinbell	70	69	poison	grass	stun spore	rest	knock off	cut
+golbat	42	41	flying	poison	roost	round	mimic	tailwind
+azumarill	184	183	fairy	water	bubble	scald	hyper beam	iron tail
+vileplume	45	44	poison	grass	mimic	body slam	facade	stun spore
+rapidash	78	77	fire	\N	strength	fire spin	swift	rest
+raticate	20	19	normal	\N	grass knot	pursuit	swagger	retaliate
+altaria	334	333	flying	dragon	iron tail	pluck	dream eater	cotton guard
+sharpedo	319	318	dark	water	snore	rock tomb	ancient power	mimic
+dusclops	356	355	ghost	\N	sunny day	ice beam	flash	ice punch
+walrein	365	364	water	ice	hail	ice fang	water gun	roar
+aggron	306	305	rock	steel	fire punch	mega kick	rock polish	aerial ace
+marshtomp	259	258	ground	water	endeavor	growl	body slam	toxic
+donphan	232	231	ground	\N	body slam	gyro ball	rest	sleep talk
+ludicolo	272	271	grass	water	hidden power	grass knot	confide	surf
+ninjask	291	290	flying	bug	endure	solar beam	rest	hone claws
+silcoon	266	265	bug	\N	electroweb	string shot	iron defense	bug bite
+vigoroth	288	287	normal	\N	power up punch	dynamic punch	mimic	snore
+glalie	362	361	ice	\N	double team	giga impact	bite	rain dance
+roselia	315	406	poison	grass	attract	rest	worry seed	psych up
+lairon	305	304	rock	steel	bulldoze	iron tail	mimic	iron head
+loudred	294	293	normal	\N	mud slap	double team	body slam	headbutt
+lombre	271	270	grass	water	flash	toxic	bullet seed	surf
+masquerain	284	283	flying	bug	endure	sweet scent	double edge	energy ball
+sealeo	364	363	water	ice	double edge	rain dance	facade	substitute
+banette	354	353	ghost	\N	curse	pain split	dazzling gleam	return
+armaldo	348	347	bug	rock	return	rock blast	low kick	crush claw
+cradily	346	345	grass	rock	substitute	double team	bullet seed	rock smash
+huntail	367	366	water	\N	screech	body slam	natural gift	waterfall
+mightyena	262	261	dark	\N	psych up	return	sand attack	take down
+chimecho	358	433	psychic	\N	growl	hypnosis	round	natural gift
+crawdaunt	342	341	dark	water	sludge wave	dark pulse	rain dance	harden
+piloswine	221	220	ground	ice	rain dance	strength	sleep talk	superpower
+vibrava	329	328	dragon	ground	twister	air cutter	double edge	protect
+cascoon	268	266	bug	\N	string shot	iron defense	bug bite	harden
+swellow	277	276	flying	normal	attract	endeavor	tailwind	swagger
+ursaring	217	216	normal	\N	ice punch	hyper beam	leer	brick break
+gorebyss	368	366	water	\N	confusion	double edge	swagger	icy wind
+swalot	317	316	poison	\N	snore	yawn	ice punch	bullet seed
+pupitar	247	246	ground	rock	substitute	body slam	leer	rest
+nuzleaf	274	273	dark	grass	return	worry seed	swift	false swipe
+shelgon	372	371	dragon	\N	protect	aerial ace	sunny day	fire blast
+octillery	224	223	water	\N	rest	toxic	water gun	psychic
+cacturne	332	331	dark	grass	snore	headbutt	retaliate	body slam
+magcargo	219	218	rock	fire	strength	ember	sandstorm	double edge
+whiscash	340	339	ground	water	swagger	frustration	rock smash	earthquake
+breloom	286	285	fighting	grass	rest	low sweep	cut	mega drain
+blaziken	257	256	fighting	fire	ember	mega punch	counter	hidden power
+wailord	321	320	water	\N	double team	strength	astonish	scald
+manectric	310	309	electric	\N	snore	discharge	tackle	thunder
+combusken	256	255	fighting	fire	fling	swagger	snore	focus blast
+grumpig	326	325	psychic	\N	splash	drain punch	return	focus blast
+kirlia	281	280	fairy	psychic	shock wave	heal pulse	calm mind	disarming voice
+salamence	373	372	flying	dragon	rock tomb	protect	shadow claw	attract
+shiftry	275	274	dark	grass	swift	brick break	headbutt	twister
+grovyle	253	252	grass	\N	double edge	confide	screech	mega punch
+metang	375	374	psychic	steel	snore	metal claw	take down	flash cannon
+claydol	344	343	psychic	ground	double edge	ice beam	protect	harden
+milotic	350	349	water	\N	disarming voice	giga impact	hydro pump	hyper beam
+sceptile	254	253	grass	\N	earthquake	endeavor	slam	mud slap
+exploud	295	294	normal	\N	solar beam	rest	thunder punch	hyper beam
+linoone	264	263	normal	\N	attract	odor sleuth	round	natural gift
+tyranitar	248	247	dark	rock	whirlpool	body slam	avalanche	toxic
+flygon	330	329	dragon	ground	dragon claw	flamethrower	draco meteor	return
+medicham	308	307	psychic	fighting	return	detect	shadow ball	feint
+delcatty	301	300	normal	\N	grass knot	dream eater	shadow ball	safeguard
+hariyama	297	296	fighting	\N	seismic toss	heavy slam	return	hyper beam
+houndoom	229	228	fire	dark	dark pulse	torment	roar	nightmare
+swampert	260	259	ground	water	bulldoze	substitute	mud bomb	hidden power
+beautifly	267	266	flying	bug	stun spore	ominous wind	defog	hidden power
+mantine	226	458	flying	water	facade	confuse ray	mud sport	ice beam
+camerupt	323	322	ground	fire	round	mimic	hyper beam	amnesia
 \.
 
 
@@ -1633,7 +1633,7 @@ ALTER TABLE ONLY move
 --
 
 ALTER TABLE ONLY pokemon
-    ADD CONSTRAINT pokemon_evolves_to_fkey FOREIGN KEY (evolves_to) REFERENCES pokemon(pokedex_num) ON UPDATE CASCADE ON DELETE CASCADE;
+    ADD CONSTRAINT pokemon_evolves_to_fkey FOREIGN KEY (evolves_from) REFERENCES pokemon(pokedex_num) ON UPDATE CASCADE ON DELETE CASCADE;
 
 
 --
