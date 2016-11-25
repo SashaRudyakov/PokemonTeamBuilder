@@ -1520,6 +1520,57 @@ camerupt	323	322	ground	fire	round	mimic	hyper beam	amnesia
 --
 
 COPY strong_against (weak_type, strong_type) FROM stdin;
+normal	fighting
+rock	fighting
+steel	fighting
+ice	fighting
+dark	fighting
+fighting	flying
+bug	flying
+grass	flying
+grass	poison
+fairy	poison
+poison	ground
+rock	ground
+steel	ground
+fire	ground
+electric	ground
+flying	rock
+bug	rock
+fire	rock
+ice	rock
+grass	bug
+psychic	bug
+dark	bug
+ghost	ghost
+psychic	ghost
+rock	steel
+ice	steel
+fairy	steel
+bug	fire
+steel	fire
+grass	fire
+ice	fire
+ground	water
+rock	water
+fire	water
+ground	grass
+rock	grass
+water	grass
+flying	electric
+water	electric
+fighting	psychic
+poison	psychic
+flying	ice
+ground	ice
+grass	ice
+dragon	ice
+dragon	dragon
+ghost	dark
+psychic	dark
+fighting	fairy
+dragon	fairy
+dark	fairy
 \.
 
 
