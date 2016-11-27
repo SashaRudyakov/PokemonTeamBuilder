@@ -2,16 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"></meta>
-    <title>Sasha's Awesome Webpage</title>
+    <title>Pokemon | Detail</title>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="../../css/form.scss" th:href="@{/css/form.scss}"/>
 </head>
-<img style="display: inline-block" th:src="'../../sprites/' + ${person.pokedexNum} + '.png'" width="100px" height="100px" />
+<img style="display: inline-block" th:src="'../../sprites/' + ${pokemon.pokedexNum} + '.png'" width="100px" height="100px" />
 <h3 style="display: inline-block" th:inline="text">
-    [[${#strings.capitalize(person.name)}]]</h3>
-<form action="#" th:action="@{/save-person}" th:object="${person}" method="post">
+    [[${#strings.capitalize(pokemon.name)}]]</h3>
+<form action="#" th:action="@{/save-pokemon}" th:object="${pokemon}" method="post">
     <input hidden="hidden" type="text" th:field="*{pokedexNum}" th:value="*{pokedexNum}" />
     <div class="form-group">
         <label>Name</label>
@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
         <label>Evolves To</label>
-        <input class="form-control" readonly="readonly" type="text" th:field="*{evolvesTo}" th:value="*{evolvesTo}" />
+        <input class="form-control" readonly="readonly" type="text" th:field="*{evolvesFrom}" th:value="*{evolvesFrom}" />
     </div>
     <div class="form-group">
         <label>Type1</label>
@@ -34,7 +34,7 @@
         <input class="form-control" type="text" th:field="*{move1}" th:value="*{move1}"/>
     </div>
     <div class="form-group">
-        <label>Move2</label>Move2
+        <label>Move2</label>
         <input class="form-control" type="text" th:field="*{move2}" th:value="*{move2}"/>
     </div>
     <div class="form-group">

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Pokemon | View All</title>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+</head>
+<div th:switch="${team}">
+    <div th:case="true">
+        <h3 style="display: inline-block" th:inline="text">
+            [[${#strings.capitalize(trainer.name)}]]'s Team</h3>
+    </div>
+    <div th:case="false">
+        <h3> Pokemon </h3>
+    </div>
+</div>
+<body>
+<form action="#" th:action="@{/types}" method="get" style="display:inline-block">
+    <button type="submit" class="btn btn-primary">View Types</button>
+</form>
+<table class="table table-striped table-hover table-bordered table-condensed">
+    <thead>
+        <th>DexNum</th>
+        <th>Name</th>
+        <th>Evolves To</th>
+        <th>Type1</th>
+        <th>Type2</th>
+        <th>Move1</th>
+        <th>Move2</th>
+        <th>Move3</th>
+        <th>Move4</th>
+        <th>Sprite</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+    <th:block th:each="p : ${pokemon}">
+        <tr>
+            <td th:text="${p.pokedexNum}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.evolvesFrom}"></td>
+            <td th:text="${p.type1}"></td>
+            <td th:text="${p.type2}"></td>
+            <td>
+                <div th:text="${p.move1}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${p.move1})}">Details</a>
+            </td>
+            <td>
+                <div th:text="${p.move2}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${p.move2})}">Details</a>
+            </td>
+            <td>
+                <div th:text="${p.move3}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${p.move3})}">Details</a>
+            </td>
+            <td>
+                <div th:text="${p.move4}"></div>
+                <a href="#" data-th-href="@{/moveDetails(moveName=${p.move4})}">Details</a>
+            </td>
+            <td>
+                <img th:src="'../../sprites/' + ${p.pokedexNum} + '.png'" width="100px" height="100px" />
+            </td>
+            <td>
+                <a href="#" data-th-href="@{/edit(id=${p.pokedexNum})}">Edit</a>
+                <div th:switch="${team}">
+                    <div th:case="true">
+                        <a href="#" data-th-href="@{/drop(pid=${p.pokedexNum},tid=${trainer.tid})}">Drop</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<div th:switch="${team}">
+    <div th:case="true">
+        <h4>Add New Pokemon</h4>
+        <form action="#" th:action="@{/add-pokemon}" th:object="${trains}" method="post" style="display:inline-block">
+            <input class="form-control" type="text" th:field="*{pokedexNum}" th:value="*{pokedexNum}" />
+            <input hidden="hidden" th:field="*{tid}" th:value="*{tid}" />
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

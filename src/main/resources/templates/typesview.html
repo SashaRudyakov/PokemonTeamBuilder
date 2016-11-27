@@ -2,24 +2,37 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"></meta>
-    <title>Sasha's Awesome Webpage</title>
+    <title>Pokemon | Types</title>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 </head>
 <h3> Types </h3>
+<h4 style="display: inline-block" th:inline="text">
+    [[${queryType}]][[${#strings.capitalize(type)}]]</h4>
 <body>
-<table border="1" style="width:300px">
+<table class="table table-striped table-hover table-bordered table-condensed">
     <thead>
     <th>Name</th>
+    <th>Actions</th>
     </thead>
     <tbody>
     <th:block th:each="type : ${types}">
         <tr>
             <td th:text="${type.name}">A Smoke Test'</td>
+            <td>
+                <a href="#" data-th-href="@{/strong-against(name=${type.name})}">Strengths</a>
+                <a href="#" data-th-href="@{/weak-against(name=${type.name})}">Weaknesses</a>
+            </td>
         </tr>
     </th:block>
     </tbody>
 </table>
-<form action="#" th:action="@{/createType}" method="get">
-    <input type="submit" value="createType" />
+<form action="#" th:action="@{/types}" method="get" style="display:inline-block">
+    <button type="submit" class="btn btn-primary">View All</button>
+</form>
+<form action="#" th:action="@{/}" method="get" style="display:inline-block">
+    <button type="submit" class="btn btn-primary">Home</button>
 </form>
 </body>
 </html>

@@ -92,7 +92,7 @@ public class Keys {
 
 	private static class ForeignKeys0 extends AbstractKeys {
 		public static final ForeignKey<MoveRecord, TypeRecord> MOVE__MOVE_TYPE_FKEY = createForeignKey(com.pokemon.db.Keys.TYPE_PKEY, Move.MOVE, Move.MOVE.TYPE);
-		public static final ForeignKey<PokemonRecord, PokemonRecord> POKEMON__POKEMON_EVOLVES_TO_FKEY = createForeignKey(com.pokemon.db.Keys.POKEMON_PKEY, Pokemon.POKEMON, Pokemon.POKEMON.EVOLVES_TO);
+		public static final ForeignKey<PokemonRecord, PokemonRecord> POKEMON__POKEMON_EVOLVES_TO_FKEY = createForeignKey(com.pokemon.db.Keys.POKEMON_PKEY, Pokemon.POKEMON, Pokemon.POKEMON.EVOLVES_FROM);
 		public static final ForeignKey<PokemonRecord, TypeRecord> POKEMON__POKEMON_TYPE1_FKEY = createForeignKey(com.pokemon.db.Keys.TYPE_PKEY, Pokemon.POKEMON, Pokemon.POKEMON.TYPE1);
 		public static final ForeignKey<PokemonRecord, TypeRecord> POKEMON__POKEMON_TYPE2_FKEY = createForeignKey(com.pokemon.db.Keys.TYPE_PKEY, Pokemon.POKEMON, Pokemon.POKEMON.TYPE2);
 		public static final ForeignKey<PokemonRecord, MoveRecord> POKEMON__POKEMON_MOVE1_FKEY = createForeignKey(com.pokemon.db.Keys.MOVE_PKEY, Pokemon.POKEMON, Pokemon.POKEMON.MOVE1);

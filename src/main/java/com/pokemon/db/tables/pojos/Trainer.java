@@ -26,11 +26,13 @@ public class Trainer implements Serializable {
 
 	private static final long serialVersionUID = -741477151;
 
-	private final String  name;
-	private final Integer tid;
-	private final Gender  gender;
-	private final Integer age;
-	private final String  username;
+	String  name;
+	Integer tid;
+	Gender  gender;
+	Integer age;
+	String  username;
+
+	public Trainer() {}
 
 	public Trainer(Trainer value) {
 		this.name = value.name;
@@ -73,6 +75,12 @@ public class Trainer implements Serializable {
 	public String getUsername() {
 		return this.username;
 	}
+
+	public void setName(String name) { this.name = name; }
+	public void setTid(Integer tid) { this.tid = tid; }
+	public void setGender(Gender gender) { this.gender = gender; }
+	public void setAge(Integer age) { this.age = age; }
+	public void setUsername(String username) { this.username = username; }
 
 	@Override
 	public String toString() {

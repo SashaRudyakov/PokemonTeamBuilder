@@ -24,7 +24,9 @@ public class Type implements Serializable {
 
 	private static final long serialVersionUID = -1394931224;
 
-	private final String name;
+	String name;
+
+	public Type() {}
 
 	public Type(Type value) {
 		this.name = value.name;
@@ -39,6 +41,7 @@ public class Type implements Serializable {
 	public String getName() {
 		return this.name;
 	}
+	public void setName(String name) { this.name = name; }
 
 	@Override
 	public String toString() {

@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Pokemon extends TableImpl<PokemonRecord> {
 
-	private static final long serialVersionUID = -548306970;
+	private static final long serialVersionUID = 1777781943;
 
 	/**
 	 * The reference instance of <code>public.pokemon</code>
@@ -60,9 +60,9 @@ public class Pokemon extends TableImpl<PokemonRecord> {
 	public final TableField<PokemonRecord, Integer> POKEDEX_NUM = createField("pokedex_num", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
 	/**
-	 * The column <code>public.pokemon.evolves_to</code>.
+	 * The column <code>public.pokemon.evolves_from</code>.
 	 */
-	public final TableField<PokemonRecord, Integer> EVOLVES_TO = createField("evolves_to", org.jooq.impl.SQLDataType.INTEGER, this, "");
+	public final TableField<PokemonRecord, Integer> EVOLVES_FROM = createField("evolves_from", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
 	 * The column <code>public.pokemon.type1</code>.

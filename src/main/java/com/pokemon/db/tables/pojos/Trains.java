@@ -24,8 +24,10 @@ public class Trains implements Serializable {
 
 	private static final long serialVersionUID = 55975285;
 
-	private final Integer pokedexNum;
-	private final Integer tid;
+	Integer pokedexNum;
+	Integer tid;
+
+	public Trains() {}
 
 	public Trains(Trains value) {
 		this.pokedexNum = value.pokedexNum;
@@ -47,6 +49,9 @@ public class Trains implements Serializable {
 	public Integer getTid() {
 		return this.tid;
 	}
+
+	public void setPokedexNum(Integer pokedexNum) { this.pokedexNum = pokedexNum; }
+	public void setTid(Integer tid) { this.tid = tid; }
 
 	@Override
 	public String toString() {

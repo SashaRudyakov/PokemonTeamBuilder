@@ -28,7 +28,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class PokemonRecord extends UpdatableRecordImpl<PokemonRecord> implements Record9<String, Integer, Integer, String, String, String, String, String, String> {
 
-	private static final long serialVersionUID = -2061305325;
+	private static final long serialVersionUID = 905374784;
 
 	/**
 	 * Setter for <code>public.pokemon.name</code>.
@@ -61,17 +61,17 @@ public class PokemonRecord extends UpdatableRecordImpl<PokemonRecord> implements
 	}
 
 	/**
-	 * Setter for <code>public.pokemon.evolves_to</code>.
+	 * Setter for <code>public.pokemon.evolves_from</code>.
 	 */
-	public PokemonRecord setEvolvesTo(Integer value) {
+	public PokemonRecord setEvolvesFrom(Integer value) {
 		setValue(2, value);
 		return this;
 	}
 
 	/**
-	 * Getter for <code>public.pokemon.evolves_to</code>.
+	 * Getter for <code>public.pokemon.evolves_from</code>.
 	 */
-	public Integer getEvolvesTo() {
+	public Integer getEvolvesFrom() {
 		return (Integer) getValue(2);
 	}
 
@@ -218,7 +218,7 @@ public class PokemonRecord extends UpdatableRecordImpl<PokemonRecord> implements
 	 */
 	@Override
 	public Field<Integer> field3() {
-		return Pokemon.POKEMON.EVOLVES_TO;
+		return Pokemon.POKEMON.EVOLVES_FROM;
 	}
 
 	/**
@@ -290,7 +290,7 @@ public class PokemonRecord extends UpdatableRecordImpl<PokemonRecord> implements
 	 */
 	@Override
 	public Integer value3() {
-		return getEvolvesTo();
+		return getEvolvesFrom();
 	}
 
 	/**
@@ -364,7 +364,7 @@ public class PokemonRecord extends UpdatableRecordImpl<PokemonRecord> implements
 	 */
 	@Override
 	public PokemonRecord value3(Integer value) {
-		setEvolvesTo(value);
+		setEvolvesFrom(value);
 		return this;
 	}
 
@@ -453,12 +453,12 @@ public class PokemonRecord extends UpdatableRecordImpl<PokemonRecord> implements
 	/**
 	 * Create a detached, initialised PokemonRecord
 	 */
-	public PokemonRecord(String name, Integer pokedexNum, Integer evolvesTo, String type1, String type2, String move1, String move2, String move3, String move4) {
+	public PokemonRecord(String name, Integer pokedexNum, Integer evolvesFrom, String type1, String type2, String move1, String move2, String move3, String move4) {
 		super(Pokemon.POKEMON);
 
 		setValue(0, name);
 		setValue(1, pokedexNum);
-		setValue(2, evolvesTo);
+		setValue(2, evolvesFrom);
 		setValue(3, type1);
 		setValue(4, type2);
 		setValue(5, move1);

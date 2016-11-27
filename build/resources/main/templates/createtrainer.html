@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Pokemon | Create Trainer</title>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/form.scss" th:href="@{/css/form.scss}"/>
+</head>
+<h3>Create A New Trainer</h3>
+<body>
+<form action="#" th:action="@{/process-create}" th:object="${trainer}" method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" type="text" th:field="*{name}" />
+    </div>
+    <div class="form-group">
+        <label>Gender</label>
+        <select class="form-control" th:field="*{gender}">
+            <option th:value="'male'">Male</option>
+            <option th:value="'female'">Female</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        <input class="form-control" type="text" th:field="*{age}" />
+    </div>
+    <div class="form-group">
+        <label>Username</label>
+        <input class="form-control" type="text" th:field="*{username}" />
+    </div>
+    <input type="submit" />
+</form>
+</body>
+</html>
