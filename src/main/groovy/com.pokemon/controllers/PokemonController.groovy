@@ -27,7 +27,7 @@ public class PokemonController {
 
     @Autowired PokemonService PokemonService;
 
-    // Show all people in the "people" database
+    // Show all pokemon
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView pokemon() {
         ModelAndView mav = new ModelAndView("pokemonview");
@@ -36,7 +36,7 @@ public class PokemonController {
         return mav;
     }
 
-    // shows the form for editing a person
+    // Show form for editing pokemon
     @RequestMapping(value="/edit", method=RequestMethod.GET)
     public ModelAndView edit(@RequestParam(value="id", required=true) int id) {
         ModelAndView mav = new ModelAndView("pokemonDetailsView");
@@ -45,7 +45,7 @@ public class PokemonController {
         return mav;
     }
 
-    // performs saving person logic HIDDEN
+    // Saves changes
     @RequestMapping(value="/save-pokemon", method=RequestMethod.POST)
     public ModelAndView save(@ModelAttribute(value="pokemon") @Valid PokemonP pokemon, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {

@@ -21,7 +21,7 @@ class MoveService  {
         jooq = dslc;
     }
 
-    // retrieve all people from the database
+    // retrieve move based on name
     com.pokemon.db.tables.pojos.Move getMove(String moveName) {
         Record result = jooq.select().from(com.pokemon.db.tables.Move.MOVE).where(
                 com.pokemon.db.tables.Move.MOVE.NAME.equal(moveName)).fetchOne()

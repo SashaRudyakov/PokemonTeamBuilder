@@ -26,13 +26,13 @@ class TrainerService  {
         jooq = dslc;
     }
 
-    // retrieve all types
+    // retrieve all trainers
     List getTrainers() {
         def result2 = jooq.select().from(com.pokemon.db.tables.Trainer.TRAINER)
         result2.fetchInto(com.pokemon.db.tables.pojos.Trainer)
     }
 
-    // create a new person
+    // create a new trainer
     void createTrainer(com.pokemon.db.tables.pojos.Trainer p) {
         jooq.insertInto(com.pokemon.db.tables.Trainer.TRAINER,
                 com.pokemon.db.tables.Trainer.TRAINER.NAME,
@@ -47,20 +47,20 @@ class TrainerService  {
         ).execute()
     }
 
-    // delete a person
+    // delete a trainer
     void deleteTrainer(Integer id) {
         jooq.delete(com.pokemon.db.tables.Trainer.TRAINER).where(
                 com.pokemon.db.tables.Trainer.TRAINER.TID.equal(id)).execute()
     }
 
-    // retrieve a person from the database based on id
+    // retrieve a trainer by id
     com.pokemon.db.tables.pojos.Trainer getTrainer(int id) {
         Record result = jooq.select().from(com.pokemon.db.tables.Trainer.TRAINER)
                 .where(com.pokemon.db.tables.Trainer.TRAINER.TID.equal(id)).fetchOne()
         result.into(com.pokemon.db.tables.pojos.Trainer)
     }
 
-    // update the given person from the database based on first name (MUST BE UNIQUE) NAME CANNOT BE CHANGED
+    // update trainer
     void updateTrainer(com.pokemon.db.tables.pojos.Trainer p) {
         def updateQuery = jooq.update(com.pokemon.db.tables.Trainer.TRAINER).set(com.pokemon.db.tables.Trainer.TRAINER.TID, p.getTid())
         updateQuery.set(com.pokemon.db.tables.Trainer.TRAINER.NAME, p.getName())
@@ -70,16 +70,18 @@ class TrainerService  {
         updateQuery.where(com.pokemon.db.tables.Trainer.TRAINER.TID.equal(p.getTid())).execute()
     }
 
+    // retrieve trainer team
     List getTeam(int id) {
         def result = jooq.select()
                 .from(com.pokemon.db.tables.Trains.TRAINS
                 .join(com.pokemon.db.tables.Pokemon.POKEMON)
                 .on(com.pokemon.db.tables.Trains.TRAINS.POKEDEX_NUM.equal(com.pokemon.db.tables.Pokemon.POKEMON.POKEDEX_NUM))
         ).where(com.pokemon.db.tables.Trains.TRAINS.TID.equal(id))
-        
+
         result.fetchInto(PokemonP);
     }
 
+    // drop pokemon from team
     void dropPokemon(int pid, int tid) {
         jooq.delete(com.pokemon.db.tables.Trains.TRAINS)
                 .where(com.pokemon.db.tables.Trains.TRAINS.POKEDEX_NUM.equal(pid))
@@ -87,6 +89,7 @@ class TrainerService  {
                 .execute()
     }
 
+    // add pokemon to team
     void addPokemon(com.pokemon.db.tables.pojos.Trains trains) {
         jooq.insertInto(com.pokemon.db.tables.Trains.TRAINS,
                 com.pokemon.db.tables.Trains.TRAINS.POKEDEX_NUM,

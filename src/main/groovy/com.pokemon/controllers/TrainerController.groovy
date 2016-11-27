@@ -1,14 +1,10 @@
 package com.pokemon.controllers;
 
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.beans.propertyeditors.StringTrimmerEditor;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.pokemon.services.TrainerService;
+import com.pokemon.services.PokemonService;
 import com.pokemon.db.tables.pojos.Trainer;
 import com.pokemon.db.tables.pojos.Trains;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,8 +17,9 @@ import javax.validation.Valid;
 public class TrainerController {
 
     @Autowired TrainerService trainerService;
+    @Autowired PokemonService pokemonService;
 
-    // Show all types
+    // Show all trainers
     @RequestMapping(value = "/trainers", method = RequestMethod.GET)
     public ModelAndView types() {
         ModelAndView mav = new ModelAndView("trainerview");
@@ -74,14 +71,14 @@ public class TrainerController {
         }
     }
 
-    // shows the form for editing a person
+    // manage trainer team
     @RequestMapping(value="/manage-team", method=RequestMethod.GET)
     public ModelAndView manageTeam(@RequestParam(value="id", required=true) int id) {
         ModelAndView mav = new ModelAndView("pokemonview");
         def trainer = trainerService.getTrainer(id);
         def pokemon = trainerService.getTeam(id);
-        Trains t = new Trains();
-        t.setTid(id);
+        Trains2 t = new Trains2();
+        t.tid = id;
         mav.addObject("team", true);
         mav.addObject("trainer", trainer);
         mav.addObject("pokemon", pokemon);
@@ -89,7 +86,7 @@ public class TrainerController {
         return mav;
     }
 
-    // shows the form for editing a person
+    // drop pokemon from team
     @RequestMapping(value="/drop", method=RequestMethod.GET)
     public ModelAndView drop(@RequestParam(value="pid", required=true) int pid,
                                    @RequestParam(value="tid", required=true) int tid) {
@@ -97,10 +94,20 @@ public class TrainerController {
         new ModelAndView("redirect:/manage-team?id=" + tid);
     }
 
-    // shows the form for editing a person
+    // add pokemon to team
     @RequestMapping(value="/add-pokemon", method=RequestMethod.POST)
-    public ModelAndView add(@ModelAttribute(value="trains") Trains trains) {
-        trainerService.addPokemon(trains);
-        new ModelAndView("redirect:/manage-team?id=" + trains.getTid());
+    public ModelAndView add(@ModelAttribute(value="trains") Trains2 trains) {
+        def pid = pokemonService.getPokemonByName(trains.name.toLowerCase()).getPokedexNum();
+        Trains t = new Trains(pid, trains.tid);
+        trainerService.addPokemon(t);
+        new ModelAndView("redirect:/manage-team?id=" + trains.tid);
+    }
+
+    // baby class for populating trains objects with names rather than pids
+    static class Trains2 {
+        String name;
+        Integer tid;
+
+        Trains2() {}
     }
 }

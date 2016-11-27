@@ -9,13 +9,12 @@
 </head>
 <h3> Trainers </h3>
 <body>
-<form action="#" th:action="@{/types}" method="get" style="display:inline-block">
-    <button type="submit" class="btn btn-primary">View Types</button>
-</form>
-<form action="#" th:action="@{/}" method="get" style="display:inline-block">
-    <button type="submit" class="btn btn-primary">View Pokemon</button>
-</form>
-
+<div>
+    <a href="#" data-th-href="@{/types}">Types</a>
+</div>
+<div>
+    <a href="#" data-th-href="@{/}">Pokemon</a>
+</div>
 <table class="table table-striped table-hover table-bordered table-condensed">
     <thead>
     <th>TID</th>

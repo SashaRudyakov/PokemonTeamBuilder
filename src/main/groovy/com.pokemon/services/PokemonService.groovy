@@ -24,19 +24,25 @@ class PokemonService  {
         jooq = dslc;
     }
 
-    // retrieve all people from the database
+    // retrieve all pokemon from the database
     List getAllPokemon() {
         def result2 = jooq.select().from(com.pokemon.db.tables.Pokemon.POKEMON)
         result2.fetchInto(PokemonP)
     }
 
-    // retrieve a person from the database based on id
+    // retrieve a pokemon from the database based on id
     PokemonP getPokemon(int id) {
         Record result = jooq.select().from(Pokemon.POKEMON).where(Pokemon.POKEMON.POKEDEX_NUM.equal(id)).fetchOne()
         result.into(PokemonP)
     }
 
-    // update the given person from the database based on first name (MUST BE UNIQUE) NAME CANNOT BE CHANGED
+    // retrieve a pokemon from the database based on name
+    PokemonP getPokemonByName(String name) {
+        def result = jooq.select().from(Pokemon.POKEMON).where(Pokemon.POKEMON.NAME.equal(name)).fetchOne()
+        result.into(PokemonP)
+    }
+
+    // update pokemon
     void updatePokemon(PokemonP p) {
         def updateQuery = jooq.update(Pokemon.POKEMON).set(Pokemon.POKEMON.POKEDEX_NUM, p.getPokedexNum())
         updateQuery.set(Pokemon.POKEMON.NAME, p.getName())

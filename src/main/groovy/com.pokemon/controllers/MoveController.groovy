@@ -21,7 +21,7 @@ public class MoveController {
 
     @Autowired MoveService moveService;
 
-    // shows the form for editing a person
+    // show move details
     @RequestMapping(value="/moveDetails", method=RequestMethod.GET)
     public ModelAndView viewMoveDetails(@RequestParam(value="moveName", required=true) String moveName) {
         ModelAndView mav = new ModelAndView("moveDetails");
