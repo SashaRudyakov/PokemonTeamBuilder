@@ -22,14 +22,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pokemonview.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/resources/templates/pokemonview.html">
+      <file leaf-file-name="typesview.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/resources/templates/typesview.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
               <folding>
-                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trainerview.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/resources/templates/trainerview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +86,6 @@
         <option value="$PROJECT_DIR$/main/resources/templates/trainerdetails.html" />
         <option value="$PROJECT_DIR$/main/groovy/com.pokemon/controllers/TeamController.groovy" />
         <option value="$PROJECT_DIR$/main/java/com/pokemon/db/tables/pojos/Trains.java" />
-        <option value="$PROJECT_DIR$/main/resources/templates/trainerview.html" />
         <option value="$PROJECT_DIR$/main/groovy/com.pokemon/controllers/TrainerController.groovy" />
         <option value="$PROJECT_DIR$/main/groovy/com.pokemon/services/TrainerService.groovy" />
         <option value="$PROJECT_DIR$/main/groovy/com.pokemon/services/PokemonService.groovy" />
@@ -82,6 +94,7 @@
         <option value="$PROJECT_DIR$/main/groovy/com.pokemon/services/MoveService.groovy" />
         <option value="$PROJECT_DIR$/main/groovy/com.pokemon/Application.groovy" />
         <option value="$PROJECT_DIR$/main/resources/templates/pokemonview.html" />
+        <option value="$PROJECT_DIR$/main/resources/templates/trainerview.html" />
       </list>
     </option>
   </component>
@@ -749,16 +762,16 @@
       <option name="presentableId" value="Default" />
       <updated>1479431506702</updated>
       <workItem from="1479431508053" duration="1814000" />
-      <workItem from="1480209412146" duration="14933000" />
+      <workItem from="1480209412146" duration="15589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20163000" />
+    <option name="totallyTimeSpent" value="20819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -771,7 +784,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -897,7 +910,7 @@
         <state relative-caret-position="445">
           <caret line="110" column="20" selection-start-line="110" selection-start-column="20" selection-end-line="110" selection-end-column="20" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -907,7 +920,7 @@
         <state relative-caret-position="-135">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -917,7 +930,7 @@
         <state relative-caret-position="555">
           <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -927,7 +940,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -937,7 +950,7 @@
         <state relative-caret-position="45">
           <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="28" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -947,7 +960,7 @@
         <state relative-caret-position="685">
           <caret line="82" column="73" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="73" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -965,7 +978,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -983,8 +996,8 @@
         <state relative-caret-position="375">
           <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h3#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -997,44 +1010,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/templates/trainerdetails.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/templates/trainerview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/resources/templates/typesview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/java/com/pokemon/db/tables/pojos/Trains.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1044,7 +1025,7 @@
         <state relative-caret-position="345">
           <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <element signature="e#34#83#0" expanded="true" />
+            <element signature="e#34#83#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1054,7 +1035,7 @@
         <state relative-caret-position="547">
           <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
           <folding>
-            <element signature="e#34#77#0" expanded="true" />
+            <element signature="e#34#77#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1064,7 +1045,7 @@
         <state relative-caret-position="625">
           <caret line="51" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#34#83#0" expanded="true" />
+            <element signature="e#34#83#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1074,7 +1055,7 @@
         <state relative-caret-position="505">
           <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
           <folding>
-            <element signature="e#34#82#0" expanded="true" />
+            <element signature="e#34#82#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1084,7 +1065,7 @@
         <state relative-caret-position="345">
           <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
           <folding>
-            <element signature="e#30#67#0" expanded="true" />
+            <element signature="e#30#67#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1104,7 +1085,7 @@
         <state relative-caret-position="535">
           <caret line="91" column="26" selection-start-line="91" selection-start-column="26" selection-end-line="91" selection-end-column="26" />
           <folding>
-            <element signature="e#30#67#0" expanded="true" />
+            <element signature="e#30#67#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1122,18 +1103,50 @@
         <state relative-caret-position="277">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#30#67#0" expanded="true" />
+            <element signature="e#30#67#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/resources/templates/pokemonview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#form#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/resources/templates/typesview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/resources/templates/trainerdetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/resources/templates/trainerview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
