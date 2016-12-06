@@ -32,18 +32,22 @@
     <div class="form-group">
         <label>Move1</label>
         <input class="form-control" type="text" th:field="*{move1}" th:value="*{move1}"/>
+        <font color="red" th:if="${#fields.hasErrors('move1')}">Invalid Move</font>
     </div>
     <div class="form-group">
         <label>Move2</label>
         <input class="form-control" type="text" th:field="*{move2}" th:value="*{move2}"/>
+        <font color="red" th:if="${#fields.hasErrors('move2')}">Invalid Move</font>
     </div>
     <div class="form-group">
         <label>Move3</label>
         <input class="form-control" type="text" th:field="*{move3}" th:value="*{move3}"/>
+        <font color="red" th:if="${#fields.hasErrors('move3')}">Invalid Move</font>
     </div>
     <div class="form-group">
         <label>Move4</label>
         <input class="form-control" type="text" th:field="*{move4}" th:value="*{move4}"/>
+        <font color="red" th:if="${#fields.hasErrors('move4')}">Invalid Move</font>
     </div>
     <input type="submit" />
 </form>

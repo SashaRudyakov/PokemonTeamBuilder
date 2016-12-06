@@ -60,6 +60,13 @@ class TrainerService  {
         result.into(com.pokemon.db.tables.pojos.Trainer)
     }
 
+    // retrieve a trainer by username
+    com.pokemon.db.tables.pojos.Trainer getTrainerByUsername(String username) {
+        Record result = jooq.select().from(com.pokemon.db.tables.Trainer.TRAINER)
+                .where(com.pokemon.db.tables.Trainer.TRAINER.USERNAME.equal(username)).fetchOne()
+        result.into(com.pokemon.db.tables.pojos.Trainer)
+    }
+
     // update trainer
     void updateTrainer(com.pokemon.db.tables.pojos.Trainer p) {
         def updateQuery = jooq.update(com.pokemon.db.tables.Trainer.TRAINER).set(com.pokemon.db.tables.Trainer.TRAINER.TID, p.getTid())
