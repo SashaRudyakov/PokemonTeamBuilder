@@ -41,14 +41,14 @@
     <thead>
         <th>DexNum</th>
         <th>Name</th>
-        <th>Evolves From</th>
+        <th>Sprite</th>
         <th>Type1</th>
         <th>Type2</th>
         <th>Move1</th>
         <th>Move2</th>
         <th>Move3</th>
         <th>Move4</th>
-        <th>Sprite</th>
+        <th>Evolves From</th>
         <th>Action</th>
     </thead>
     <tbody>
@@ -57,9 +57,7 @@
             <td th:text="${p.pokedexNum}"></td>
             <td th:text="${p.name}"></td>
             <td>
-                <a th:if="${p.evolvesFrom != null}" th:href="'#' + ${p.evolvesFrom}">
-                <img th:if="${p.evolvesFrom != null}" th:src="'../../sprites/' + ${p.evolvesFrom} + '.png'" width="100px" height="100px" />
-                </a>
+                <img th:src="'../../sprites/' + ${p.pokedexNum} + '.png'" width="100px" height="100px" />
             </td>
             <td th:text="${p.type1}"></td>
             <td th:text="${p.type2}"></td>
@@ -80,7 +78,9 @@
                 <a href="#" data-th-href="@{/moveDetails(moveName=${p.move4})}">Details</a>
             </td>
             <td>
-                <img th:src="'../../sprites/' + ${p.pokedexNum} + '.png'" width="100px" height="100px" />
+                <a th:if="${p.evolvesFrom != null}" th:href="'#' + ${p.evolvesFrom}">
+                    <img th:if="${p.evolvesFrom != null}" th:src="'../../sprites/' + ${p.evolvesFrom} + '.png'" width="100px" height="100px" />
+                </a>
             </td>
             <td>
                 <a href="#" data-th-href="@{/edit(id=${p.pokedexNum})}">Edit</a>
