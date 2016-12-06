@@ -53,6 +53,7 @@ public class Keys {
 	public static final UniqueKey<PokemonRecord> POKEMON_PKEY = UniqueKeys0.POKEMON_PKEY;
 	public static final UniqueKey<StrongAgainstRecord> STRONG_AGAINST_PKEY = UniqueKeys0.STRONG_AGAINST_PKEY;
 	public static final UniqueKey<TrainerRecord> TRAINER_PKEY = UniqueKeys0.TRAINER_PKEY;
+	public static final UniqueKey<TrainerRecord> UNIQUE_USERNAME = UniqueKeys0.UNIQUE_USERNAME;
 	public static final UniqueKey<TrainsRecord> TRAINS_PKEY = UniqueKeys0.TRAINS_PKEY;
 	public static final UniqueKey<TypeRecord> TYPE_PKEY = UniqueKeys0.TYPE_PKEY;
 
@@ -86,6 +87,7 @@ public class Keys {
 		public static final UniqueKey<PokemonRecord> POKEMON_PKEY = createUniqueKey(Pokemon.POKEMON, Pokemon.POKEMON.POKEDEX_NUM);
 		public static final UniqueKey<StrongAgainstRecord> STRONG_AGAINST_PKEY = createUniqueKey(StrongAgainst.STRONG_AGAINST, StrongAgainst.STRONG_AGAINST.WEAK_TYPE, StrongAgainst.STRONG_AGAINST.STRONG_TYPE);
 		public static final UniqueKey<TrainerRecord> TRAINER_PKEY = createUniqueKey(Trainer.TRAINER, Trainer.TRAINER.TID);
+		public static final UniqueKey<TrainerRecord> UNIQUE_USERNAME = createUniqueKey(Trainer.TRAINER, Trainer.TRAINER.USERNAME);
 		public static final UniqueKey<TrainsRecord> TRAINS_PKEY = createUniqueKey(Trains.TRAINS, Trains.TRAINS.POKEDEX_NUM, Trains.TRAINS.TID);
 		public static final UniqueKey<TypeRecord> TYPE_PKEY = createUniqueKey(Type.TYPE, Type.TYPE.NAME);
 	}

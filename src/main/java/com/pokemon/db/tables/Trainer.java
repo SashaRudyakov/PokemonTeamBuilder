@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Trainer extends TableImpl<TrainerRecord> {
 
-	private static final long serialVersionUID = -1943014498;
+	private static final long serialVersionUID = -491480768;
 
 	/**
 	 * The reference instance of <code>public.trainer</code>
@@ -118,7 +118,7 @@ public class Trainer extends TableImpl<TrainerRecord> {
 	 */
 	@Override
 	public List<UniqueKey<TrainerRecord>> getKeys() {
-		return Arrays.<UniqueKey<TrainerRecord>>asList(Keys.TRAINER_PKEY);
+		return Arrays.<UniqueKey<TrainerRecord>>asList(Keys.TRAINER_PKEY, Keys.UNIQUE_USERNAME);
 	}
 
 	/**
