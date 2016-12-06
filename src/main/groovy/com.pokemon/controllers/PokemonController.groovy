@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.ModelAndView
 import javax.validation.Valid;
 
+import com.pokemon.validators.PokemonValidator;
+
 @Controller
 public class PokemonController {
 
@@ -26,6 +28,9 @@ public class PokemonController {
     }
 
     @Autowired PokemonService PokemonService;
+
+    @Autowired
+    PokemonValidator pokemonValidator;
 
     // Show all pokemon
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -48,6 +53,7 @@ public class PokemonController {
     // Saves changes
     @RequestMapping(value="/save-pokemon", method=RequestMethod.POST)
     public ModelAndView save(@ModelAttribute(value="pokemon") @Valid PokemonP pokemon, BindingResult bindingResult) {
+        pokemonValidator.validate(pokemon, bindingResult);
         if (bindingResult.hasErrors()) {
             new ModelAndView("pokemonDetailsView")
         }

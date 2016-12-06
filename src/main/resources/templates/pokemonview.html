@@ -7,6 +7,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 </head>
+<div th:switch="${error}">
+    <div th:case="null"></div>
+    <div th:case="*">
+        <p style="font-size: 18px;
+            background-color: #ffa7a7;
+            color: #ff0000;
+            padding-left: 20px;" th:inline="text">[[${error}]]</p>
+    </div>
+</div>
 <div th:switch="${team}">
     <div th:case="true">
         <h3 style="display: inline-block" th:inline="text">

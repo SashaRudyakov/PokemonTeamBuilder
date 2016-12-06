@@ -26,7 +26,7 @@ class PokemonService  {
 
     // retrieve all pokemon from the database
     List getAllPokemon() {
-        def result2 = jooq.select().from(com.pokemon.db.tables.Pokemon.POKEMON)
+        def result2 = jooq.select().from(com.pokemon.db.tables.Pokemon.POKEMON).orderBy(Pokemon.POKEMON.POKEDEX_NUM.asc())
         result2.fetchInto(PokemonP)
     }
 
