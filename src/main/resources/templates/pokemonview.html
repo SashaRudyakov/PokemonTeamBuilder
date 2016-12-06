@@ -53,10 +53,14 @@
     </thead>
     <tbody>
     <th:block th:each="p : ${pokemon}">
-        <tr>
+        <tr th:id="${p.pokedexNum}">
             <td th:text="${p.pokedexNum}"></td>
             <td th:text="${p.name}"></td>
-            <td th:text="${p.evolvesFrom}"></td>
+            <td>
+                <a th:if="${p.evolvesFrom != null}" th:href="'#' + ${p.evolvesFrom}">
+                <img th:if="${p.evolvesFrom != null}" th:src="'../../sprites/' + ${p.evolvesFrom} + '.png'" width="100px" height="100px" />
+                </a>
+            </td>
             <td th:text="${p.type1}"></td>
             <td th:text="${p.type2}"></td>
             <td>
