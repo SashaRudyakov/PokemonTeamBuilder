@@ -1672,6 +1672,14 @@ ALTER TABLE ONLY type
 
 
 --
+-- Name: unique_username; Type: CONSTRAINT; Schema: public; Owner: katelynsalvatori
+--
+
+ALTER TABLE ONLY trainer
+    ADD CONSTRAINT unique_username UNIQUE (username);
+
+
+--
 -- Name: move_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: katelynsalvatori
 --
 
